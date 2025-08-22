@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark-sea-storm: #001B20;
+  --sea-storm: #001E24;
+  --dark-sea: #004554;
+  --azure: #00B3DB;
+  --muted-azure: #324C52;
+  --dark-gray: #D3D9DA;
+  --bluish-gray: #D4E1E4;
+  --gray: #ECF0F2;
+}
+
+body {
+  color: var(--dark-blue);
+  background: var(--white);
+}
