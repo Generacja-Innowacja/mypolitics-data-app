@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
-export const Footer: React.FC = () => {
+export const Footer = (): JSX.Element => {
   return (
     <header className="flex w-full py-6 border-t border-bluish-gray justify-center">
       <div className="flex flex-col md:flex-row gap-4 md:justify-between md:items-center w-full max-w-screen-xl mx-6">
@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
           </span>
           <div className="h-[12px] w-[1px] bg-bluish-gray" />
           <Link href={PATHS.HOME}>
-            <Image src="/assets/common/mypolitics-logo.svg" alt="myPolitics Logo" height={16} width={88} />
+            <Image src="/assets/common/mypolitics-logo.svg" alt="myPolitics Logo" height={16} width={87.83} />
           </Link>
         </div>
         <nav className="flex items-center gap-4 text-dark-sea text-sm">
@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
           <Link href={PATHS.PRIVACY}>
             Regulamin serwisu
           </Link>
-          <Link href={PATHS.ABOUT}>
+          <Link href={PATHS.GI_ORG_PL}>
             O nas
           </Link>
         </nav>
