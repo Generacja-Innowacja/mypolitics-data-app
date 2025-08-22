@@ -8,7 +8,7 @@ import { Roboto } from 'next/font/google';
 const roboto = Roboto({
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
-  weight: ["500", "700"]
+  weight: ["400", "700"]
 });
 
 export function AppLayout({ children }: { children: React.ReactNode }) {

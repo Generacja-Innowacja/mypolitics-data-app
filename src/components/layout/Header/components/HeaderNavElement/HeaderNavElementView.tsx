@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/shared/Button";
 import Link from "next/link";
 import React from "react";
 import { twMerge } from "tw-merge";
@@ -24,20 +25,25 @@ export const HeaderNavElement = ({
       href={href}
       className={twMerge(
         `
-        flex items-center rounded-full bg-bluish-gray p-3 leading-none gap-2 text-dark-sea flex-shrink-0 no-underline
-        ${isHighlighted ? "bg-dark-sea-storm text-white px-4" : ""}
+        flex-shrink-0 no-underline
         ${className}
         `
       )}
     >
-      {icon && (
-        <span className="flex items-center justify-center">
-          {icon}
-        </span>
-      )}
-      {text && (
-        <span className="font-bold">{text}</span>
-      )}
+      <Button
+        styleType={isHighlighted ? "primary" : "ghost"}
+        className={isHighlighted ? "bg-dark-sea-storm hover:bg-dark-sea-storm-hover" : ""}
+        sizeType="small"
+      >
+        {icon && (
+          <span className="flex items-center justify-center">
+            {icon}
+          </span>
+        )}
+        {text && (
+          <span className="font-bold">{text}</span>
+        )}
+      </Button>
     </Link>
   );
 }; 

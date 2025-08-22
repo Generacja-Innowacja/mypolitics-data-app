@@ -9,6 +9,27 @@ export interface ReportFooterSection {
     description: string | JSX.Element;
 }
 
+export interface ReportAuthor {
+    name: string;
+    position: string;
+    photoUrl: string;
+    description: string | JSX.Element;
+    socials: {
+        linkedIn?: string;
+        twitterX?: string;
+    }
+}
+
+export interface ReportDataLink {
+    title: string;
+    description: string | JSX.Element;
+    file?: {
+        extension: string;
+        sizeMB: number;
+        downloadUrl: string;
+    };
+}
+
 export interface CommonReport {
     id: string;
     title: string;
@@ -17,4 +38,6 @@ export interface CommonReport {
     date: string;
     partners: ReportPartner[];
     footer: ReportFooterSection[];
+    authors: ReportAuthor[];
+    dataLinks: ReportDataLink[];
 }

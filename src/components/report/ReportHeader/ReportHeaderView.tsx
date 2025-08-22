@@ -8,8 +8,8 @@ interface Props {
 
 const ReportHeader = ({ report }: Props): JSX.Element => {
     return (
-        <div className="border-b border-bluish-gray w-full">
-            <header className="w-full max-w-screen-xl mx-auto flex flex-col items-start gap-4 md:gap-8 py-4 md:py-16 px-4 md:px-0 text-sea font-bold">
+        <div className="flex justify-center border-b border-bluish-gray w-full">
+            <header className="w-full max-w-screen-xl mx-6 flex flex-col items-start gap-4 md:gap-8 py-4 md:py-16 text-sea font-bold">
                 <img src={report.logoUrl} alt={report.title} title={report.title} className="block h-8 md:h-12" />
                 <div className="flex flex-col gap-4 md:flex-row md:gap-8">
                     <div className="max-w-[22rem] leading-[1.5]">
