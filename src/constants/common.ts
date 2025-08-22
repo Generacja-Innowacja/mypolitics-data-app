@@ -1,19 +1,19 @@
 import { Metadata } from 'next';
 
 export const SITE_METADATA: Metadata = {
-  title: 'Site Name',
-  description: '',
+  title: 'myPolitics Data',
+  description: 'Portal danych myPolitics',
   keywords: [],
   creator: 'Generacja Innowacja',
   openGraph: {
     type: 'website',
-    url: 'https://domain.pl/',
-    title: 'Site Name',
-    description: '',
-    siteName: 'site-name',
+    url: 'https://mypolitics.pl/data',
+    title: 'myPolitics Data',
+    description: 'Portal danych myPolitics',
+    siteName: 'myPolitics Data',
     images: [
       {
-        url: 'https://domain.pl/thumbnail.png',
+        url: 'https://mypolitics.pl/data/thumbnail.png',
       },
     ],
   },

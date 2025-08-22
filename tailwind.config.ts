@@ -14,6 +14,7 @@ const config: Config = {
         'dark-sea-storm': 'var(--dark-sea-storm)',
         'sea-storm': 'var(--sea-storm)',
         'dark-sea': 'var(--dark-sea)',
+        'sea': 'var(--sea)',
         azure: 'var(--azure)',
         'muted-azure': 'var(--muted-azure)',
         'dark-gray': 'var(--dark-gray)',
