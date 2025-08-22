@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
-export const Footer: React.FC = () => {
+export const Footer = (): JSX.Element => {
   return (
     <header className="flex w-full py-6 border-t border-bluish-gray justify-center">
       <div className="flex flex-col md:flex-row gap-4 md:justify-between md:items-center w-full max-w-screen-xl mx-6">

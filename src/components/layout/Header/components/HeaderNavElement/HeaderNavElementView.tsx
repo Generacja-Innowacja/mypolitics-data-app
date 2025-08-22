@@ -12,13 +12,13 @@ interface HeaderNavElementProps {
   className?: string;
 }
 
-export const HeaderNavElement: React.FC<HeaderNavElementProps> = ({
+export const HeaderNavElement = ({
   href,
   icon,
   text,
   isHighlighted = false,
   className = "",
-}) => {
+}: HeaderNavElementProps): JSX.Element => {
   return (
     <Link
       href={href}

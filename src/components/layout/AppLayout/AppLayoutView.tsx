@@ -1,8 +1,8 @@
 import 'normalize.css';
 import './globals.css';
 
-import { Footer } from '@/components/shared/Footer';
-import { Header } from '@/components/shared/Header';
+import { Footer } from '@/components/layout/Footer';
+import { Header } from '@/components/layout/Header';
 import { Roboto } from 'next/font/google';
 
 const roboto = Roboto({

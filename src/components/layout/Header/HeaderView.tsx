@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeaderNavElement } from "./components/HeaderNavElement/HeaderNavElementView";
 
-export const Header: React.FC = () => {
+export const Header = (): JSX.Element => {
   return (
     <header className="flex w-full py-6 border-b border-bluish-gray justify-center">
       <div className="flex justify-between items-center w-full max-w-screen-xl mx-6">
