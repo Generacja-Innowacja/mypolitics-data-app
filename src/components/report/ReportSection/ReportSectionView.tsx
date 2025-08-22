@@ -1,6 +1,6 @@
 interface Props {
     title: string | JSX.Element;
-    children: JSX.Element;
+    children: JSX.Element | string;
 }
 
 const ReportSection = ({ title, children }: Props): JSX.Element => {
