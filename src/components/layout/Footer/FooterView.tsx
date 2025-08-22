@@ -16,7 +16,7 @@ export const Footer = (): JSX.Element => {
           </span>
           <div className="h-[12px] w-[1px] bg-bluish-gray" />
           <Link href={PATHS.HOME}>
-            <Image src="/assets/common/mypolitics-logo.svg" alt="myPolitics Logo" height={16} width={88} />
+            <Image src="/assets/common/mypolitics-logo.svg" alt="myPolitics Logo" height={16} width={87.83} />
           </Link>
         </div>
         <nav className="flex items-center gap-4 text-dark-sea text-sm">
@@ -26,7 +26,7 @@ export const Footer = (): JSX.Element => {
           <Link href={PATHS.PRIVACY}>
             Regulamin serwisu
           </Link>
-          <Link href={PATHS.ABOUT}>
+          <Link href={PATHS.GI_ORG_PL}>
             O nas
           </Link>
         </nav>

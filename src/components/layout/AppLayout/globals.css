@@ -14,9 +14,14 @@
   --dark-gray: #D3D9DA;
   --bluish-gray: #D4E1E4;
   --gray: #ECF0F2;
+  --background: #F9FBFB;
 }
 
 body {
-  color: var(--dark-blue);
-  background: var(--white);
+  color: var(--dark-sea);
+  background: var(--background);
+}
+
+a {
+  text-decoration: underline;
 }

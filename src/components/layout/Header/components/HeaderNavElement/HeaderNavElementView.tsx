@@ -24,7 +24,7 @@ export const HeaderNavElement = ({
       href={href}
       className={twMerge(
         `
-        flex items-center rounded-full bg-bluish-gray p-3 leading-none gap-2 text-dark-sea flex-shrink-0
+        flex items-center rounded-full bg-bluish-gray p-3 leading-none gap-2 text-dark-sea flex-shrink-0 no-underline
         ${isHighlighted ? "bg-dark-sea-storm text-white px-4" : ""}
         ${className}
         `

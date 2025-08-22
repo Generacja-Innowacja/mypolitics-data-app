@@ -16,10 +16,10 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
     <html lang="pl" className={roboto.className}>
       <body className="p-0">
         <div className="flex flex-col gap-4 w-full justify-center md:gap-6 min-h-screen">
-          <div className="flex gap-4 w-full mx-auto">
+          <div className="flex flex-col gap-4 w-full mx-auto">
             <Header />
+            {children}
           </div>
-          {children}
           <div className="w-full mx-auto mt-auto">
             <Footer />
           </div>
