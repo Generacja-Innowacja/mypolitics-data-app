@@ -13,8 +13,10 @@
     "axios": "^1.7.7",
     "next": "^14.2.14",
     "next-nprogress-bar": "^2.3.14",
+    "normalize.css": "^8.0.1",
     "react": "^18",
     "react-dom": "^18",
+    "tw-merge": "^0.0.1-alpha.3",
     "zod": "^4.0.17"
   },
   "devDependencies": {

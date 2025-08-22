@@ -1,3 +1,4 @@
+import 'normalize.css';
 import './globals.css';
 
 import { Footer } from '@/components/shared/Footer';
@@ -13,13 +14,13 @@ const roboto = Roboto({
 export function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pl" className={roboto.className}>
-      <body className="p-4 pb-0">
+      <body className="p-0">
         <div className="flex flex-col gap-4 w-full justify-center md:gap-6 min-h-screen">
-          <div className="flex gap-4 max-w-screen-xl w-full mx-auto">
+          <div className="flex gap-4 w-full mx-auto">
             <Header />
           </div>
           {children}
-          <div className="max-w-screen-xl w-full mx-auto mt-auto">
+          <div className="w-full mx-auto mt-auto">
             <Footer />
           </div>
         </div>
