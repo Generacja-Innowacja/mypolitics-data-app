@@ -29,8 +29,10 @@ export const HeaderNavElement = ({
         ${className}
         `
       )}
+      passHref
     >
       <Button
+        tag="anchor"
         styleType={isHighlighted ? "primary" : "ghost"}
         className={isHighlighted ? "bg-dark-sea-storm hover:bg-dark-sea-storm-hover" : ""}
         sizeType="small"
