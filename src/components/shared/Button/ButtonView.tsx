@@ -19,7 +19,7 @@ const sizeTypes = {
 
 interface GenericProps {
     styleType: keyof typeof styleTypes;
-    sizeType: keyof typeof sizeTypes;
+    sizeType?: keyof typeof sizeTypes;
     isIconButton?: boolean;
 }
 

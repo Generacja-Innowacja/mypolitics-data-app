@@ -1,6 +1,8 @@
 import { ReportQuestion } from "@/types/models/reportData";
 import { CSSProperties } from "react";
 import { twMerge } from "tw-merge";
+import ReportAnswerPill from "../../ReportAnswerPill";
+import { getOrderedAnswers, getOrderedAnswersByValue } from "../../utils/getOrderedAnswers";
 import { QUESTION_ELEMENT_DATA_ID } from "../ReportQuestionSelectorConstants";
 
 interface Props {
@@ -13,13 +15,15 @@ interface Props {
 }
 
 const SingleQuestion = ({ question, number, className, isSelected, style, onClick }: Props): JSX.Element => {
+    const answers = getOrderedAnswersByValue(question.answers);
+    const topAnswer = answers[0];
     const params = {
         [`data-${QUESTION_ELEMENT_DATA_ID}`]: question.id,
     }
 
     return (
         <div
-            className={twMerge(`flex gap-8 opacity-${isSelected ? 100 : 50} items-center justify-between bg-white rounded-[32px] p-6 border border-dark-sea-storm/10 transition-opacity ${className}`)}
+            className={twMerge(`flex flex-col md:flex-row gap-4 justify-between md:gap-8 md:items-center bg-white rounded-[32px] p-6 border border-dark-sea-storm/10 transition-opacity opacity-${isSelected ? 100 : 50} ${className}`)}
             style={style}
             onClick={onClick}
             {...params}
@@ -27,8 +31,9 @@ const SingleQuestion = ({ question, number, className, isSelected, style, onClic
             <div className="font-bold text-xl">
                 <span className="opacity-50">#{number}</span>&nbsp;{question.title}
             </div>
-            <div className="px-4 py-1 rounded-full bg-sea-storm text-white font-bold">
-                {question.answers[0].value.toFixed(0)}%
+            <div className="inline-flex gap-4 items-center">
+                <ReportAnswerPill answer={topAnswer} index={0} />
+                <span className="font-bold md:hidden">{topAnswer.text}</span>
             </div>
         </div>
     )

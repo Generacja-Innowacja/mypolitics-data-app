@@ -9,6 +9,7 @@ export const reportAnswerModel = z.object({
 export const reportQuestionModel = z.object({
     id: z.string(),
     title: z.string(),
+    description: z.string().optional(),
     answers: z.array(reportAnswerModel)
 });
 
