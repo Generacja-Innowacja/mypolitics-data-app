@@ -10,6 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@react-hook/window-size": "^3.1.1",
     "axios": "^1.7.7",
     "chart.js": "^4.5.0",
     "motion": "^12.23.12",

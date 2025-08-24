@@ -9,3 +9,9 @@ body {
 a {
   text-decoration: underline;
 }
+
+@keyframes shine {
+  to {
+    background-position-x: -20%;
+  }
+}

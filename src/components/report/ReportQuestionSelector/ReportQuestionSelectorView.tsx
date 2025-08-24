@@ -32,7 +32,7 @@ const ReportQuestionSelector = ({ reportData, selectedQuestionId, setSelectedQue
             <div
                 ref={questionsWrapperRef}
                 className="overflow-y-auto snap-y snap-mandatory flex flex-col gap-4"
-                style={{ height: expectedHeight === 0 ? "12rem" : expectedHeight * 2 }}
+                style={{ height: expectedHeight === 0 ? "212px" : expectedHeight * 2 }}
             >
                 {reportData.questions.map((question, index) => {
                     const isSelected = question.id === selectedQuestionId;

@@ -1,5 +1,6 @@
 import { ReportAnswer } from "@/types/models/reportData";
 import { getAnswerColor } from "../utils/getAnswerColor";
+import { getAnswerFormattedValue } from "../utils/getAnswerFormattedValue";
 
 interface Props {
     answer: ReportAnswer;
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const ReportAnswerPill = ({ answer, index }: Props): JSX.Element => {
-    const valueFormatted = `${answer.value.toFixed(0)}%`;
+    const valueFormatted = getAnswerFormattedValue(answer.value);
     const color = getAnswerColor(answer, index);
 
     return (

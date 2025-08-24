@@ -6,7 +6,7 @@ const getAnswerOrder = (answer: ReportAnswer): number => {
 }
 
 const sortByValue = (aAnswer: ReportAnswer, bAnswer: ReportAnswer): number => {
-    return aAnswer.value - bAnswer.value;
+    return bAnswer.value - aAnswer.value;
 }
 
 const sortByName = (aAnswer: ReportAnswer, bAnswer: ReportAnswer): number => {
@@ -21,5 +21,5 @@ export const getOrderedAnswersByValue = (answers: ReportAnswer[]): ReportAnswer[
 }
 
 export const getOrderedAnswers = (answers: ReportAnswer[]): ReportAnswer[] => {
-    return answers.sort((a, b) => sortByValue(a, b) * sortByName(a, b));
+    return answers.sort((a, b) => sortByValue(a, b) + sortByName(a, b));
 }

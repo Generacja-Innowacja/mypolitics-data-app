@@ -30,6 +30,9 @@ const config: Config = {
         'gray-hover': '#BFD2D6',
         background: '#F9FBFB',
       },
+      animation: {
+        'shine': 'shine 2s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

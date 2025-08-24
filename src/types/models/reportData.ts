@@ -8,15 +8,16 @@ export const reportAnswerModel = z.object({
 
 export const reportQuestionModel = z.object({
     id: z.string(),
-    title: z.string(),
-    description: z.string().optional(),
+    text: z.string(),
+    highlighted: z.boolean().optional(),
+    explanation: z.string().optional(),
     answers: z.array(reportAnswerModel)
 });
 
-export const reportData = z.object({
+export const reportDataModel = z.object({
     questions: z.array(reportQuestionModel)
 })
 
-export type ReportData = z.infer<typeof reportData>;
+export type ReportData = z.infer<typeof reportDataModel>;
 export type ReportQuestion = z.infer<typeof reportQuestionModel>;
 export type ReportAnswer = z.infer<typeof reportAnswerModel>;

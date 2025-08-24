@@ -29,7 +29,7 @@ const SingleQuestion = ({ question, number, className, isSelected, style, onClic
             {...params}
         >
             <div className="font-bold text-xl">
-                <span className="opacity-50">#{number}</span>&nbsp;{question.title}
+                <span className="opacity-50">#{number}</span>&nbsp;{question.text}
             </div>
             <div className="inline-flex gap-4 items-center">
                 <ReportAnswerPill answer={topAnswer} index={0} />

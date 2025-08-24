@@ -1,0 +1,1 @@
+export const REPORT_DATA_URL = (id: string): string => `/data/${id}.json`;
