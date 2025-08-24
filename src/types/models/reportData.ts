@@ -8,6 +8,7 @@ export const reportAnswerModel = z.object({
 
 export const reportQuestionModel = z.object({
     id: z.string(),
+    number: z.number(),
     text: z.string(),
     highlighted: z.boolean().optional(),
     explanation: z.string().optional(),

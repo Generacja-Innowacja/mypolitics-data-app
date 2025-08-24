@@ -26,7 +26,7 @@ const AnswersChart = ({ answers }: Props): JSX.Element => {
     };
 
     return (
-        <div className="hidden sm:block h-[128px] w-[128px] md:h-[196px] md:w-[196px]">
+        <div className="hidden sm:block h-[128px] w-[128px] md:h-[196px] md:w-[196px] flex-shrink-0">
             <Doughnut height={chartSize} width={chartSize} data={data} />
         </div>
     )

@@ -73,7 +73,7 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
             file: {
                 extension: 'pdf',
                 sizeMB: 1,
-                downloadUrl: '///'
+                downloadUrl: 'https://drive.google.com/file/d/1Vsl-4Gg2Id--BE8qhWpdXph2LmNCnBCZ/view?usp=sharing'
             }
         },
         {
