@@ -1,17 +1,18 @@
 import { ReportAnswer } from "@/types/models/reportData";
 import { getAnswerColor } from "../utils/getAnswerColor";
+import { getAnswerFormattedValue } from "../utils/getAnswerFormattedValue";
 
 interface Props {
     answer: ReportAnswer;
-    index: number;
+    index?: number;
 }
 
-const ReportAnswerPill = ({ answer, index }: Props): JSX.Element => {
-    const valueFormatted = `${answer.value.toFixed(0)}%`;
+const ReportAnswerPill = ({ answer, index = 0 }: Props): JSX.Element => {
+    const valueFormatted = getAnswerFormattedValue(answer.value);
     const color = getAnswerColor(answer, index);
 
     return (
-        <div className="w-[80px] text-center py-2 rounded-full bg-sea-storm text-white font-bold flex-shrink-0" style={{ backgroundColor: color }}>
+        <div className="w-[80px] text-center py-2 rounded-full bg-sea-storm text-white font-bold flex-shrink-0 transition-colors" style={{ backgroundColor: color }}>
             {valueFormatted}
         </div>
     )

@@ -32,9 +32,9 @@ const ReportQuestionSelector = ({ reportData, selectedQuestionId, setSelectedQue
             <div
                 ref={questionsWrapperRef}
                 className="overflow-y-auto snap-y snap-mandatory flex flex-col gap-4"
-                style={{ height: expectedHeight === 0 ? "12rem" : expectedHeight * 2 }}
+                style={{ height: expectedHeight === 0 ? "212px" : expectedHeight * 2 }}
             >
-                {reportData.questions.map((question, index) => {
+                {reportData.questions.map((question) => {
                     const isSelected = question.id === selectedQuestionId;
 
                     return (
@@ -43,7 +43,7 @@ const ReportQuestionSelector = ({ reportData, selectedQuestionId, setSelectedQue
                             onClick={() => handleQuestionClick(question.id)}
                             className={twMerge(`snap-center cursor-pointer ${isSelected ? '' : 'hover:opacity-75'}`)}
                             question={question}
-                            number={index + 1}
+                            number={question.number}
                             isSelected={isSelected}
                             style={{
                                 minHeight: expectedHeight === 0 ? undefined : expectedHeight,
