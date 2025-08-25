@@ -6,6 +6,7 @@ import ReportQuestions from "@/components/report/ReportQuestions";
 import ReportSection from "@/components/report/ReportSection";
 import { ReportData } from "@/types/models/reportData";
 import { CommonReport } from "@/types/report";
+import ReportFindings from "../ReportFindings";
 
 interface Props {
     reportConfig: CommonReport;
@@ -20,6 +21,7 @@ const ReportPage = ({ reportData, reportConfig }: Props): JSX.Element => {
         <article className="flex flex-col items-center gap-8 md:gap-16 pb-8 md:pb-16">
             <ReportHeader report={reportConfig} />
             <div className="flex flex-col gap-8 md:gap-12 max-w-screen-lg items-center w-full">
+                <ReportFindings reportData={reportData.data} />
                 <ReportSection title="Analiza pytań">
                     <ReportQuestions reportData={reportData.data} isLoading={reportData.isLoading} />
                 </ReportSection>

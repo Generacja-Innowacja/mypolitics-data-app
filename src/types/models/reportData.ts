@@ -10,6 +10,7 @@ export const reportQuestionModel = z.object({
     id: z.string(),
     number: z.number(),
     text: z.string(),
+    finding: z.string().optional(),
     highlighted: z.boolean().optional(),
     explanation: z.string().optional(),
     answers: z.array(reportAnswerModel)

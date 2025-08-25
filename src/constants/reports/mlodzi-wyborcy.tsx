@@ -77,6 +77,19 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
             }
         },
         {
+            title: 'Dane przeanalizowane',
+            description: (
+                <>
+                    Zbiór wszystkich <b className="font-bold">76</b> pytań i stosunku odpowiedzi respondentów.
+                </>
+            ),
+            file: {
+                extension: 'xlsx',
+                sizeMB: 1,
+                downloadUrl: 'https://docs.google.com/spreadsheets/d/1eMOmkCnj4sKmtM1vvVCiWswsOqD-9R8odbhk9ZSYCpQ/edit?usp=sharing'
+            }
+        },
+        {
             title: 'Próbka danych',
             description: (
                 <>
@@ -85,8 +98,8 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
             ),
             file: {
                 extension: 'csv',
-                sizeMB: 5,
-                downloadUrl: '///'
+                sizeMB: 8,
+                downloadUrl: 'https://drive.google.com/file/d/1cntF3uabnsVAQu2AthlyWVIGueap6RsO/view?usp=sharing'
             }
         },
         {

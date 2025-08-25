@@ -11,7 +11,7 @@ interface Props {
 
 const ReportDataLink = ({ dataLink }: Props): JSX.Element => {
     const fileButton = dataLink.file && (
-        <Link href={dataLink.file.downloadUrl} className="flex flex-shrink-0" target="_blank" rel="noopener noreferrer" passHref>
+        <Link href={dataLink.file.downloadUrl} className="flex flex-shrink-0 no-underline" target="_blank" rel="noopener noreferrer" passHref>
             <Button tag="anchor">
                 <DownloadIcon />
                 <span>{dataLink.file.extension.toUpperCase()} <span className="opacity-75 font-light">({dataLink.file.sizeMB}MB)</span></span>
@@ -20,7 +20,7 @@ const ReportDataLink = ({ dataLink }: Props): JSX.Element => {
     )
 
     const fallbackButton = (
-        <Link href={PATHS.GI_ORG_PL} className="flex flex-shrink-0" target="_blank" rel="noopener noreferrer" passHref>
+        <Link href={PATHS.GI_ORG_PL} className="flex flex-shrink-0 no-underline" target="_blank" rel="noopener noreferrer" passHref>
             <Button tag="anchor">
                 <PhoneIcon />
                 <span>gi.org.pl</span>

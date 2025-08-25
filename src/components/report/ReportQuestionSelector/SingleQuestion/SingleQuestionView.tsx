@@ -2,8 +2,7 @@ import { ReportQuestion } from "@/types/models/reportData";
 import { CSSProperties } from "react";
 import { twMerge } from "tw-merge";
 import ReportAnswerPill from "../../ReportAnswerPill";
-import { getGroupedAnswers } from "../../utils/getGroupedAnswers";
-import { getOrderedAnswersByValue } from "../../utils/getOrderedAnswers";
+import { getQuestionTopAnswer } from "../../utils/getQuestionTopAnswer";
 import { QUESTION_ELEMENT_DATA_ID } from "../ReportQuestionSelectorConstants";
 
 interface Props {
@@ -16,9 +15,7 @@ interface Props {
 }
 
 const SingleQuestion = ({ question, number, className, isSelected, style, onClick }: Props): JSX.Element => {
-    const groupedAnswers = getGroupedAnswers(question.answers);
-    const sortedAnswers = getOrderedAnswersByValue(groupedAnswers);
-    const topAnswer = sortedAnswers[0];
+    const topAnswer = getQuestionTopAnswer(question);
     const params = {
         [`data-${QUESTION_ELEMENT_DATA_ID}`]: question.id,
     }

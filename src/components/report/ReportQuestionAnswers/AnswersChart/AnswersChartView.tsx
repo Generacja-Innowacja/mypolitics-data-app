@@ -1,5 +1,5 @@
+import { useIsMobile } from "@/shared/hooks/useIsMobile";
 import { ReportAnswer } from "@/types/models/reportData";
-import { useWindowWidth } from '@react-hook/window-size';
 import { ArcElement, Chart as ChartJS } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { getAnswerColor } from "../../utils/getAnswerColor";
@@ -11,8 +11,7 @@ interface Props {
 }
 
 const AnswersChart = ({ answers }: Props): JSX.Element => {
-    const windowWidth = useWindowWidth();
-    const isMobile = windowWidth < 768;
+    const isMobile = useIsMobile();
     const chartSize = isMobile ? 128 : 196;
 
     const data = {
