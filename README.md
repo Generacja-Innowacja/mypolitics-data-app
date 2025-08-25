@@ -1,8 +1,20 @@
-# Next.js Project Boilerplate
+# myPolitics Data
 
-## Repository contents
+A comprehensive data portal for political and social research, built with Next.js and modern web technologies. This platform provides access to research reports, survey data, and interactive visualizations for political and social studies.
 
-Repository contains boilerplate project using Next.js.
+## About the Project
+
+myPolitics Data is a portal that makes political and social research data accessible to researchers, journalists, and the general public. The platform currently features the "Młodzi Wyborcy 2025" (Young Voters 2025) report, which analyzes the views of young Poles on important social and political issues.
+
+### Key Features
+
+- **Interactive Data Reports**: Explore survey results with interactive charts and visualizations
+- **Data Downloads**: Access raw data in multiple formats (CSV, XLSX, PDF)
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Modern UI/UX**: Built with Tailwind CSS and smooth animations
+- **Data Transparency**: Comprehensive methodology and sample descriptions
+
+### Technology
 
 Project is using Node.js and TypeScript in versions listed below:
 
@@ -15,17 +27,22 @@ Main dependencies are Next.js and React in versions listed below.
 
 | Vendor  | Version |
 | ------- | ------- |
-| Next.js | ^14.x   |
-| React   | ^18.x   |
+| Next.js | ^14.x |
+| React   | ^18.x |
 | Tailwind CSS | ^3.x |
-| Zod     | ^4.x    |
-| Axios   | ^1.x    |
+| Chart.js | ^4.x |
+| React-Chartjs-2 | ^5.x |
+| Motion | ^12.x |
+| Zod     | ^4.x |
+| Axios   | ^1.x |
 
 ### Package descriptions
 
 - **Next.js** - React framework for production with features like server-side rendering, static generation, and API routes
 - **React** - JavaScript library for building user interfaces
 - **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+- **Motion** - Animation library for smooth transitions and micro-interactions
+- **Chart.js & React-Chartjs-2** - Interactive data visualization and charting library
 - **Zod** - TypeScript-first schema validation library for runtime type checking
 - **Axios** - Promise-based HTTP client for making API requests
 
@@ -42,19 +59,25 @@ This app uses Node.js and Yarn package manager. In order to set up project, foll
    - Or use a version manager like [nvm](https://github.com/nvm-sh/nvm)
 
 2. Install Yarn globally:
+
    ```shell
    npm install --global yarn
    ```
 
 3. Clone project by running:
+
     ```shell
     git clone <your-repository-url>
     ```
+
 4. Navigate to the project directory:
+
     ```shell
     cd nextjs-boilerplate
     ```
+
 5. Install dependencies using Yarn:
+
     ```shell
     yarn install
     ```
@@ -96,7 +119,7 @@ yarn type-check       # Run TypeScript type checking
 
 ## Static Export
 
-This project uses Next.js static export for optimal performance and deployment flexibility. 
+This project uses Next.js static export for optimal performance and deployment flexibility.
 
 **Important**: This approach generates static HTML files at build time. Server-side features like SSR, API routes, and dynamic routes are not available. All data fetching must occur during build time or on the client side.
 
@@ -126,3 +149,6 @@ yarn add -D vitest @testing-library/react @testing-library/jest-dom jsdom
 - [React Documentation](https://react.dev/reference/react) - React.js reference
 - [Learn React](https://react.dev/learn) - an interactive React.js tutorial.
 - [Tailwind CSS Documentation](https://tailwindcss.com/) - Tailwind CSS documentation.
+- [Motion Documentation](https://motion.dev/) - Animation library for React
+- [Chart.js Documentation](https://www.chartjs.org/) - Chart.js documentation and examples
+- [React-Chartjs-2 Documentation](https://react-chartjs-2.js.org/) - React wrapper for Chart.js
