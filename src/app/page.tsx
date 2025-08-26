@@ -1,10 +1,7 @@
-'use client';
+"use client";
+
+import MlodziWyborcyPage from "@/components/mlodzi-wyborcy/MlodziWyborcyPage";
 
 export default function Home() {
-
-  return (
-    <div>
-      app-name
-    </div>
-  );
+  return <MlodziWyborcyPage />;
 }

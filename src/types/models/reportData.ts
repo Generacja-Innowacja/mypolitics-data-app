@@ -1,24 +1,24 @@
 import { z } from "zod";
 
 export const reportAnswerModel = z.object({
-    id: z.string(),
-    text: z.string(),
-    value: z.number()
-})
+  id: z.string(),
+  text: z.string(),
+  value: z.number(),
+});
 
 export const reportQuestionModel = z.object({
-    id: z.string(),
-    number: z.number(),
-    text: z.string(),
-    finding: z.string().optional(),
-    highlighted: z.boolean().optional(),
-    explanation: z.string().optional(),
-    answers: z.array(reportAnswerModel)
+  id: z.string(),
+  number: z.number(),
+  text: z.string(),
+  finding: z.string().optional(),
+  highlighted: z.boolean().optional(),
+  explanation: z.string().optional(),
+  answers: z.array(reportAnswerModel),
 });
 
 export const reportDataModel = z.object({
-    questions: z.array(reportQuestionModel)
-})
+  questions: z.array(reportQuestionModel),
+});
 
 export type ReportData = z.infer<typeof reportDataModel>;
 export type ReportQuestion = z.infer<typeof reportQuestionModel>;

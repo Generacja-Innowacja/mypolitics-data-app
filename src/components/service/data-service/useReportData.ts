@@ -17,7 +17,9 @@ export const useReportData = ({ id }: Args): Output => {
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
-    const response = await fetch(REPORT_DATA_URL(id)).finally(() => setIsLoading(false));
+    const response = await fetch(REPORT_DATA_URL(id)).finally(() =>
+      setIsLoading(false),
+    );
     if (!response.ok) {
       throw new Error(`Error fetching report data: ${response.statusText}`);
     }
@@ -34,6 +36,6 @@ export const useReportData = ({ id }: Args): Output => {
 
   return {
     data,
-    isLoading
-  }
-}
+    isLoading,
+  };
+};

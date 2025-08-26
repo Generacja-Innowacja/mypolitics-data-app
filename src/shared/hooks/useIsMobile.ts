@@ -1,6 +1,6 @@
 import { useWindowWidth } from "@react-hook/window-size";
 
 export const useIsMobile = (): boolean => {
-    const windowWidth = useWindowWidth();
-    return windowWidth < 768;
-}
+  const windowWidth = useWindowWidth();
+  return windowWidth < 768;
+};

@@ -1,54 +1,66 @@
 import { useCallback, useEffect, useLayoutEffect, useState } from "react";
-import { useDebouncedCallback } from 'use-debounce';
+import { useDebouncedCallback } from "use-debounce";
 
 interface Args {
-    questionsWrapperRef: React.MutableRefObject<HTMLDivElement | null>;
+  questionsWrapperRef: React.MutableRefObject<HTMLDivElement | null>;
 }
 
 interface Output {
-    expectedHeight: number;
+  expectedHeight: number;
 }
 
 const RESET_HEIGHT_DELAY = 1000; // 1 s
 
-export const useQuestionsExpectedHeight = ({ questionsWrapperRef }: Args): Output => {
-    const [expectedHeight, setExpectedHeight] = useState<number>(0);
+export const useQuestionsExpectedHeight = ({
+  questionsWrapperRef,
+}: Args): Output => {
+  const [expectedHeight, setExpectedHeight] = useState<number>(0);
 
-    const resetExpectedHeight = useCallback(() => {
-        const questionsWrapper = questionsWrapperRef.current;
-        if (!questionsWrapper) return;
+  const resetExpectedHeight = useCallback(() => {
+    const questionsWrapper = questionsWrapperRef.current;
+    if (!questionsWrapper) return;
 
-        const questionsElements = [...questionsWrapper.children];
-        const questionsElementsHeights = questionsElements.map(child => child.getBoundingClientRect().height);
-        const questionMaxHeight = Math.max(...questionsElementsHeights)
-        setExpectedHeight(questionMaxHeight)
-    }, [questionsWrapperRef.current]);
+    const questionsElements = [...questionsWrapper.children];
+    const questionsElementsHeights = questionsElements.map(
+      (child) => child.getBoundingClientRect().height,
+    );
+    const questionMaxHeight = Math.max(...questionsElementsHeights);
+    setExpectedHeight(questionMaxHeight);
+  }, [questionsWrapperRef]);
 
-    const debouncedResetExpectedHeight = useDebouncedCallback(resetExpectedHeight, RESET_HEIGHT_DELAY);
+  const debouncedResetExpectedHeight = useDebouncedCallback(
+    resetExpectedHeight,
+    RESET_HEIGHT_DELAY,
+  );
 
-    const handleResetExpectedHeightOnResize = () => {
-        setExpectedHeight(0);
-        debouncedResetExpectedHeight();
+  const handleResetExpectedHeightOnResize = useCallback(() => {
+    setExpectedHeight(0);
+    debouncedResetExpectedHeight();
+  }, [debouncedResetExpectedHeight]);
+
+  useEffect(() => {
+    const questionsWrapper = questionsWrapperRef.current;
+    if (!questionsWrapper) return;
+
+    window.addEventListener("resize", handleResetExpectedHeightOnResize);
+    return () => {
+      window.removeEventListener("resize", handleResetExpectedHeightOnResize);
     };
+  }, [
+    questionsWrapperRef,
+    resetExpectedHeight,
+    setExpectedHeight,
+    handleResetExpectedHeightOnResize,
+  ]);
 
-    useEffect(() => {
-        const questionsWrapper = questionsWrapperRef.current
-        if (!questionsWrapper) return
+  useLayoutEffect(() => {
+    const questionsWrapper = questionsWrapperRef.current;
+    if (!questionsWrapper) return;
 
-        window.addEventListener("resize", handleResetExpectedHeightOnResize)
-        return () => {
-            window.removeEventListener("resize", handleResetExpectedHeightOnResize)
-        }
-    }, [questionsWrapperRef.current, resetExpectedHeight, setExpectedHeight])
+    resetExpectedHeight();
+  }, [questionsWrapperRef, resetExpectedHeight]);
 
-    useLayoutEffect(() => {
-        const questionsWrapper = questionsWrapperRef.current
-        if (!questionsWrapper) return;
-
-        resetExpectedHeight()
-    }, [questionsWrapperRef.current])
-
-    return {
-        expectedHeight
-    }
-}
+  return {
+    expectedHeight,
+  };
+};

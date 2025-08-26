@@ -27,25 +27,23 @@ export const HeaderNavElement = ({
         `
         flex-shrink-0 no-underline
         ${className}
-        `
+        `,
       )}
       passHref
     >
       <Button
         tag="anchor"
         styleType={isHighlighted ? "primary" : "ghost"}
-        className={isHighlighted ? "bg-dark-sea-storm hover:bg-dark-sea-storm-hover" : ""}
+        className={
+          isHighlighted ? "bg-dark-sea-storm hover:bg-dark-sea-storm-hover" : ""
+        }
         sizeType="small"
       >
         {icon && (
-          <span className="flex items-center justify-center">
-            {icon}
-          </span>
+          <span className="flex items-center justify-center">{icon}</span>
         )}
-        {text && (
-          <span className="font-bold">{text}</span>
-        )}
+        {text && <span className="font-bold">{text}</span>}
       </Button>
     </Link>
   );
-}; 
+};
