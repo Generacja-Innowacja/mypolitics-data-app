@@ -33,12 +33,11 @@ interface DivProps extends React.HTMLAttributes<HTMLDivElement>, GenericProps {
   tag?: "div";
 }
 
-type Props = ButtonProps & DivProps;
+type Props = ButtonProps | DivProps;
 
 const Button = ({
   styleType = "primary",
   sizeType = "medium",
-  tag,
   isIconButton,
   children,
   ...props
@@ -57,7 +56,7 @@ const Button = ({
     props.className,
   ];
 
-  if (tag === "div") {
+  if (props.tag === "div") {
     return (
       <div {...props} className={twMerge(classNames.join(" "))}>
         {children}
@@ -65,11 +64,19 @@ const Button = ({
     );
   }
 
-  return (
-    <button {...props} className={twMerge(classNames.join(" "))}>
-      {children}
-    </button>
-  );
+  if (props.tag === "button") {
+    return (
+      <button {...props} className={twMerge(classNames.join(" "))}>
+        {children}
+      </button>
+    );
+  }
+
+  return null;
+};
+
+Button.defaultProps = {
+  tag: "button",
 };
 
 export default Button;

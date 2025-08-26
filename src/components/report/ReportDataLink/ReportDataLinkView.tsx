@@ -17,7 +17,7 @@ const ReportDataLink = ({ dataLink }: Props): JSX.Element => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Button tag="div">
+      <Button tag="div" styleType="primary">
         <DownloadIcon />
         <span>
           {dataLink.file.extension.toUpperCase()}{" "}
@@ -36,7 +36,7 @@ const ReportDataLink = ({ dataLink }: Props): JSX.Element => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Button tag="div">
+      <Button tag="div" styleType="primary">
         <PhoneIcon />
         <span>gi.org.pl</span>
       </Button>
