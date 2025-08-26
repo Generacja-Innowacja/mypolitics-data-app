@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
-import { AppLayout } from '@/components/layout/AppLayout';
-import { SITE_METADATA } from '@/constants/common';
+import { AppLayout } from "@/components/layout/AppLayout";
+import { SITE_METADATA } from "@/constants/common";
 
 export const metadata: Metadata = SITE_METADATA;
 

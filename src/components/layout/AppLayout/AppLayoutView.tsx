@@ -1,14 +1,14 @@
-import 'normalize.css';
-import './globals.css';
+import "normalize.css";
+import "./globals.css";
 
-import { Footer } from '@/components/layout/Footer';
-import { Header } from '@/components/layout/Header';
-import { Roboto } from 'next/font/google';
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
-  subsets: ['latin', 'latin-ext'],
-  display: 'swap',
-  weight: ["400", "700"]
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  weight: ["400", "700"],
 });
 
 export function AppLayout({ children }: { children: React.ReactNode }) {

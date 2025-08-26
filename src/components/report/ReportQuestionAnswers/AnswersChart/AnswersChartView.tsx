@@ -7,28 +7,32 @@ import { getAnswerColor } from "../../utils/getAnswerColor";
 ChartJS.register(ArcElement);
 
 interface Props {
-    answers: ReportAnswer[];
+  answers: ReportAnswer[];
 }
 
 const AnswersChart = ({ answers }: Props): JSX.Element => {
-    const isMobile = useIsMobile();
-    const chartSize = isMobile ? 128 : 196;
+  const isMobile = useIsMobile();
+  const chartSize = isMobile ? 128 : 196;
 
-    const data = {
-        responsive: true,
-        labels: answers.map(a => a.text),
-        datasets: [{
-            data: answers.map(a => a.value),
-            backgroundColor: answers.map((answer, index) => getAnswerColor(answer, index)),
-            hoverOffset: 4
-        }],
-    };
+  const data = {
+    responsive: true,
+    labels: answers.map((a) => a.text),
+    datasets: [
+      {
+        data: answers.map((a) => a.value),
+        backgroundColor: answers.map((answer, index) =>
+          getAnswerColor(answer, index),
+        ),
+        hoverOffset: 4,
+      },
+    ],
+  };
 
-    return (
-        <div className="hidden sm:block h-[128px] w-[128px] md:h-[196px] md:w-[196px] flex-shrink-0">
-            <Doughnut height={chartSize} width={chartSize} data={data} />
-        </div>
-    )
-}
+  return (
+    <div className="hidden sm:block h-[128px] w-[128px] md:h-[196px] md:w-[196px] flex-shrink-0">
+      <Doughnut height={chartSize} width={chartSize} data={data} />
+    </div>
+  );
+};
 
 export default AnswersChart;

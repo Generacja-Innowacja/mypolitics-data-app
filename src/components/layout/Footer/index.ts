@@ -1,1 +1,1 @@
-export { Footer } from './FooterView';
+export { Footer } from "./FooterView";
