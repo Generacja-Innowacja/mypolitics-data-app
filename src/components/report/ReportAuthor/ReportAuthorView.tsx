@@ -49,9 +49,8 @@ const ReportAuthor = ({ author }: Props): JSX.Element => {
                   href={author.socials.linkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
-                  passHref
                 >
-                  <Button styleType="ghost" isIconButton tag="anchor">
+                  <Button styleType="ghost" isIconButton tag="div">
                     <LinkedInIcon className="h-6" />
                   </Button>
                 </Link>
@@ -61,9 +60,8 @@ const ReportAuthor = ({ author }: Props): JSX.Element => {
                   href={author.socials.twitterX}
                   target="_blank"
                   rel="noopener noreferrer"
-                  passHref
                 >
-                  <Button styleType="ghost" isIconButton tag="anchor">
+                  <Button styleType="ghost" isIconButton tag="div">
                     <TwitterXIcon className="h-6" />
                   </Button>
                 </Link>

@@ -29,13 +29,11 @@ interface ButtonProps
   tag?: "button";
 }
 
-interface AnchorProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
-    GenericProps {
-  tag?: "anchor";
+interface DivProps extends React.HTMLAttributes<HTMLDivElement>, GenericProps {
+  tag?: "div";
 }
 
-type Props = ButtonProps & AnchorProps;
+type Props = ButtonProps & DivProps;
 
 const Button = ({
   styleType = "primary",
@@ -59,11 +57,11 @@ const Button = ({
     props.className,
   ];
 
-  if (tag === "anchor") {
+  if (tag === "div") {
     return (
-      <a {...props} className={twMerge(classNames.join(" "))}>
+      <div {...props} className={twMerge(classNames.join(" "))}>
         {children}
-      </a>
+      </div>
     );
   }
 

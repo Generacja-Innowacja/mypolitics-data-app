@@ -8,7 +8,7 @@ import { getQuestionTopAnswer } from "../../utils/getQuestionTopAnswer";
 
 interface Props {
   question: ReportQuestion;
-  className: string;
+  className?: string;
 }
 
 const SingleFinding = ({ question, className }: Props): JSX.Element | null => {
@@ -25,7 +25,7 @@ const SingleFinding = ({ question, className }: Props): JSX.Element | null => {
     >
       <div
         className={twMerge(
-          `flex flex-col gap-4 justify-between bg-white hover:bg-gray transition-colors p-6 w-full cursor-pointer ${className}`,
+          `flex flex-col gap-4 justify-between bg-white hover:bg-gray transition-colors p-6 w-full cursor-pointer ${className || ""}`,
         )}
         onClick={onClick}
       >

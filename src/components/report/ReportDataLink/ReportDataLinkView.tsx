@@ -16,9 +16,8 @@ const ReportDataLink = ({ dataLink }: Props): JSX.Element => {
       className="flex flex-shrink-0 no-underline"
       target="_blank"
       rel="noopener noreferrer"
-      passHref
     >
-      <Button tag="anchor">
+      <Button tag="div">
         <DownloadIcon />
         <span>
           {dataLink.file.extension.toUpperCase()}{" "}
@@ -36,9 +35,8 @@ const ReportDataLink = ({ dataLink }: Props): JSX.Element => {
       className="flex flex-shrink-0 no-underline"
       target="_blank"
       rel="noopener noreferrer"
-      passHref
     >
-      <Button tag="anchor">
+      <Button tag="div">
         <PhoneIcon />
         <span>gi.org.pl</span>
       </Button>
