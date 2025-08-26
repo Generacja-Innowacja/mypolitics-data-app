@@ -1,7 +1,13 @@
 "use client";
 
-import MlodziWyborcyPage from "@/components/mlodzi-wyborcy/MlodziWyborcyPage";
+import ReportPage from "@/components/report/ReportPage";
+import { MLODZI_WYBORCY_REPORT as REPORT } from "@/constants/reports/mlodzi-wyborcy";
+import { useReportData } from "@/service/data-service/useReportData";
 
-export default function MlodziWyborcy() {
-  return <MlodziWyborcyPage />;
-}
+const MlodziWyborcyPage = (): JSX.Element => {
+  const { data, isLoading } = useReportData({ id: REPORT.id });
+
+  return <ReportPage reportConfig={REPORT} reportData={{ data, isLoading }} />;
+};
+
+export default MlodziWyborcyPage;
