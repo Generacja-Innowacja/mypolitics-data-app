@@ -1,6 +1,5 @@
 import { ChevronDownIcon } from "@/assets/icons/ChevronDownIcon";
 import Button from "@/components/shared/Button";
-import { useIsMobile } from "@/shared/hooks/useIsMobile";
 import { ReportData } from "@/types/models/reportData";
 import { useCallback, useState } from "react";
 import SingleFinding from "./SingleFinding";
