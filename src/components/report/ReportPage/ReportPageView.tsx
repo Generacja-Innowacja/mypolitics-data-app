@@ -1,4 +1,3 @@
-import ReportAuthor from "@/components/report/ReportAuthor";
 import ReportDataLink from "@/components/report/ReportDataLink";
 import ReportFooter from "@/components/report/ReportFooter";
 import ReportHeader from "@/components/report/ReportHeader";
@@ -6,6 +5,7 @@ import ReportQuestions from "@/components/report/ReportQuestions";
 import ReportSection from "@/components/report/ReportSection";
 import { ReportData } from "@/types/models/reportData";
 import { CommonReport } from "@/types/report";
+import ReportAuthorGroup from "../ReportAuthorGroup";
 import ReportFindings from "../ReportFindings";
 
 interface Props {
@@ -40,8 +40,8 @@ const ReportPage = ({ reportData, reportConfig }: Props): JSX.Element => {
         </ReportSection>
         <ReportSection title="Autorzy">
           <div className="flex flex-col gap-4">
-            {reportConfig.authors.map((author, index) => (
-              <ReportAuthor key={index} author={author} />
+            {reportConfig.authors.map((authorGroup, index) => (
+              <ReportAuthorGroup key={index} authorGroup={authorGroup} />
             ))}
           </div>
         </ReportSection>

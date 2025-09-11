@@ -13,11 +13,18 @@ export interface ReportAuthor {
   name: string;
   position: string;
   photoUrl: string;
-  description: string | JSX.Element;
+  description?: string | JSX.Element;
   socials: {
     linkedIn?: string;
     twitterX?: string;
+    github?: string;
   };
+}
+
+export interface ReportAuthorGroup {
+  title: string;
+  authors: ReportAuthor[];
+  isMainGroup?: boolean;
 }
 
 export interface ReportDataLink {
@@ -38,6 +45,6 @@ export interface CommonReport {
   date: string;
   partners: ReportPartner[];
   footer: ReportFooterSection[];
-  authors: ReportAuthor[];
+  authors: ReportAuthorGroup[];
   dataLinks: ReportDataLink[];
 }
