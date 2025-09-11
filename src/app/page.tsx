@@ -1,13 +1,19 @@
 "use client";
 
-import ReportPage from "@/components/report/ReportPage";
+import ReportHeader from "@/components/report/ReportHeader";
+import { PATHS } from "@/constants/paths";
 import { MLODZI_WYBORCY_REPORT as REPORT } from "@/constants/reports/mlodzi-wyborcy";
-import { useReportData } from "@/service/data-service/useReportData";
+import { useRouter } from "next-nprogress-bar";
+import { useEffect } from "react";
 
-const MlodziWyborcyPage = (): JSX.Element => {
-  const { data, isLoading } = useReportData({ id: REPORT.id });
+const HomePage = (): JSX.Element => {
+  const router = useRouter();
 
-  return <ReportPage reportConfig={REPORT} reportData={{ data, isLoading }} />;
+  useEffect(() => {
+    router.push(PATHS.MLODZI_WYBORCY);
+  }, [router]);
+
+  return <ReportHeader report={REPORT} />;
 };
 
-export default MlodziWyborcyPage;
+export default HomePage;
