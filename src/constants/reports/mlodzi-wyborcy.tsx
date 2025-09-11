@@ -19,21 +19,6 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
       logoUrl: "/assets/mlodzi-wyborcy/young-think.png",
       url: "https://youngthink.pl",
     },
-    {
-      name: "Young Think",
-      logoUrl: "/assets/mlodzi-wyborcy/young-think.png",
-      url: "https://youngthink.pl",
-    },
-    {
-      name: "Young Think",
-      logoUrl: "/assets/mlodzi-wyborcy/young-think.png",
-      url: "https://youngthink.pl",
-    },
-    {
-      name: "Young Think",
-      logoUrl: "/assets/mlodzi-wyborcy/young-think.png",
-      url: "https://youngthink.pl",
-    },
   ],
   footer: [
     {
@@ -66,31 +51,114 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
   ],
   authors: [
     {
-      name: "Adrian Orłów",
-      position: "Założyciel myPolitics",
-      photoUrl: "/assets/people/adrian-orlow.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.",
-      socials: {
-        linkedIn: "https://www.linkedin.com/in/adrianorlow/",
-        twitterX: "https://x.com/adrianorlow",
-      },
+      title: "Liderzy",
+      isMainGroup: true,
+      authors: [
+        {
+          name: "Adrian Orłów",
+          position: "Koordynator projektu",
+          photoUrl: "/assets/people/adrian-orlow.png",
+          description: "",
+          socials: {
+            linkedIn: "https://www.linkedin.com/in/adrianorlow/",
+            twitterX: "https://x.com/adrianorlow",
+          },
+        },
+      ],
     },
     {
-      name: "Adrian Orłów",
-      position: "Założyciel myPolitics",
-      photoUrl: "/assets/people/adrian-orlow.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.",
-      socials: {},
+      title: "Merytoryka",
+      authors: [
+        {
+          name: "Maciej Jankowski",
+          position: "Head of Knowledge, analityk ds. politycznych",
+          photoUrl: "/assets/people/maciej-jankowski.png",
+          description:
+            "Head of Konwledge w Generacja Innowacja. Programista, specjalista ds. AI/ML. Analityk wykorzystujący narzędzia sztucznej inteligencji do analizy politycznej.",
+          socials: {
+            twitterX: "https://x.com/m_jankowski___",
+          },
+        },
+        {
+          name: "Rafał Kozłowski",
+          position: "Head of Marketing, analityk ds. politycznych",
+          photoUrl: "/assets/people/rafal-kozlowski.png",
+          description:
+            "Politolog, Head of Marketing w fundacji Generacja Innowacja. Ekspert ds. budowania wizerunku organizacji i marketingu politycznego. Społecznik realizujący misję budowania świadomości politycznej w przestrzeni medialnej. Członek licznych organizacji społecznych i NGO'sów.",
+          socials: {
+            linkedIn: "www.linkedin.com/in/rafał-kozłowski-a56a54209",
+            twitterX: "https://x.com/r_w_kozlowski?s=21",
+          },
+        },
+        {
+          name: "Damian Chmielewski",
+          position: "Analityk ds. politycznych i projektant grafiki",
+          photoUrl: "/assets/people/damian-chmielewski.png",
+          description:
+            "Projektant grafiki w trakcie studiów magisterskich z prawa podatkowego, świeżo po licencjacie z prawa europejskiego. Zaangażowany w liczne projekty społeczne, w tym jako współzałożyciel stowarzyszenia polskich studentów w holenderskim Maastricht. Miłośnik Warszawy, literatury kryminalnej i pizzy neapolitańskiej.",
+          socials: {
+            linkedIn: "https://nl.linkedin.com/in/chhdamian",
+          },
+        },
+        {
+          name: "Maksymilian Mirecki",
+          position: "Analityk ds. politycznych",
+          photoUrl: "/assets/people/maksymilian-mirecki.png",
+          description:
+            "Dyrektor Programowy w Our Future Foundation oraz członek inicjatywy Young Think. W myPolitics odpowiadał za kwestie merytoryczne przy przygotowywaniu quizu wyborczego. Absolwent stosunków międzynarodowych na Uniwersytecie Warszawskim, obecnie student prawa i międzynarodowych stosunków gospodarczych.",
+          socials: {
+            linkedIn:
+              "https://www.linkedin.com/in/maksymilian-mirecki-ab8126274",
+          },
+        },
+        {
+          name: "Aleksander Hycnar",
+          position: "Analityk ds. politycznych",
+          photoUrl: "/assets/people/aleksander-hycnar.png",
+          description:
+            "Student trzeciego roku ekonomii i socjologii na Sciences Po Paris oraz University of Chicago. Stypendysta Fundacji Rafała Brzoski i współzałożyciel think tanku Young Think. Specjalizuje się w makroekonomii i handlu międzynarodowym. Zdobył doświadczenie zawodowe w Departamencie Polityki Pieniężnej Banku Centralnego Armenii oraz Graduate Institute of International and Development Studies w Genewie.",
+          socials: {
+            linkedIn: "https://www.linkedin.com/in/aleksander-hycnar/",
+          },
+        },
+        {
+          name: "Katarzyna Kucharzyk",
+          position: "Analityczka ds. politycznych",
+          photoUrl: "/assets/people/katarzyna-kucharczyk.png",
+          description:
+            "Pasjonatka polityki. Entuzjastka działań na rzecz rozwoju świadomego społeczeństwa obywatelskiego i otwartego dialogu publicznego. Prywatnie UX/UI designerka.",
+          socials: {
+            linkedIn: "https://www.linkedin.com/in/k-kucharzyk",
+          },
+        },
+      ],
     },
     {
-      name: "Adrian Orłów",
-      position: "Założyciel myPolitics",
-      photoUrl: "/assets/people/adrian-orlow.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.",
-      socials: {},
+      title: "Technologia",
+      authors: [
+        {
+          name: "Oskar Barcz",
+          position: "Head of Engineering",
+          photoUrl: "/assets/people/oskar-barcz.png",
+          description: "",
+          socials: {},
+        },
+        {
+          name: "Kamil Naskręt",
+          position: "Front-End Developer",
+          photoUrl: "/assets/people/kamil-naskret.png",
+          description: "",
+          socials: {},
+        },
+        {
+          name: "Adam Derkacz",
+          position: "Front-End Developer",
+          photoUrl: "/assets/people/adam-derkacz.png",
+          description:
+            "Front-End-Developer. Jestem wolontariuszem od kwietnia 2025. Moje zainteresowania to kompozycja/produkcja muzyki oraz montaż wideo.",
+          socials: {},
+        },
+      ],
     },
   ],
   dataLinks: [

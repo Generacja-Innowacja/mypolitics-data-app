@@ -1,4 +1,5 @@
 import { ChevronDownIcon } from "@/assets/icons/ChevronDownIcon";
+import { GitHubIcon } from "@/assets/icons/GitHubIcon";
 import { LinkedInIcon } from "@/assets/icons/LinkedInIcon";
 import { TwitterXIcon } from "@/assets/icons/TwitterXIcon";
 import AnimateChangeInHeight from "@/components/shared/AnimateChangeInHeight";
@@ -15,6 +16,8 @@ interface Props {
 }
 
 const ReportAuthor = ({ author }: Props): JSX.Element => {
+  const isAnyButton =
+    author.socials.linkedIn || author.socials.twitterX || author.description;
   const [isDescriptionShown, setIsDescriptionShown] = useState(false);
 
   const toggleDescription = () => setIsDescriptionShown((v) => !v);
@@ -26,9 +29,9 @@ const ReportAuthor = ({ author }: Props): JSX.Element => {
         className="bg-white rounded-[32px] border border-dark-sea-storm/10 overflow-hidden"
       >
         <div className="flex flex-col gap-4 rounded-[32px] p-6">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-4">
-              <div className="flex rounded-full object-cover border border-gray overflow-hidden flex-shrink-0">
+          <div className="flex flex-col sm:flex-row sm:justify-between items-end sm:items-center gap-4">
+            <div className="flex items-center gap-4 w-full">
+              <div className="flex rounded-full object-cover border border-gray overflow-hidden flex-shrink-0 h-[48px] w-[48px]">
                 <Image
                   className="block h-12 w-12"
                   src={author.photoUrl}
@@ -36,6 +39,9 @@ const ReportAuthor = ({ author }: Props): JSX.Element => {
                   title={author.name}
                   height={48}
                   width={48}
+                  onError={(e) => {
+                    e.currentTarget.src = "/assets/common/default-author.png";
+                  }}
                 />
               </div>
               <div className="flex flex-col">
@@ -43,41 +49,56 @@ const ReportAuthor = ({ author }: Props): JSX.Element => {
                 <div>{author.position}</div>
               </div>
             </div>
-            <div className="flex gap-2 items-center">
-              {author.socials.linkedIn && (
-                <Link
-                  href={author.socials.linkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button styleType="ghost" isIconButton tag="div">
-                    <LinkedInIcon className="h-6" />
+            {isAnyButton && (
+              <div className="flex gap-2 items-center">
+                {author.socials.linkedIn && (
+                  <Link
+                    href={author.socials.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button styleType="ghost" isIconButton tag="div">
+                      <LinkedInIcon className="h-6" />
+                    </Button>
+                  </Link>
+                )}
+                {author.socials.twitterX && (
+                  <Link
+                    href={author.socials.twitterX}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button styleType="ghost" isIconButton tag="div">
+                      <TwitterXIcon className="h-6" />
+                    </Button>
+                  </Link>
+                )}
+                {author.socials.github && (
+                  <Link
+                    href={author.socials.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button styleType="ghost" isIconButton tag="div">
+                      <GitHubIcon className="h-6" />
+                    </Button>
+                  </Link>
+                )}
+                {author.description && (
+                  <Button
+                    styleType="outlined"
+                    isIconButton
+                    onClick={toggleDescription}
+                  >
+                    <ChevronDownIcon
+                      className={twMerge(
+                        `h-6 transition-all duration-300 ${isDescriptionShown ? "rotate-0" : "rotate-180"}`,
+                      )}
+                    />
                   </Button>
-                </Link>
-              )}
-              {author.socials.twitterX && (
-                <Link
-                  href={author.socials.twitterX}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button styleType="ghost" isIconButton tag="div">
-                    <TwitterXIcon className="h-6" />
-                  </Button>
-                </Link>
-              )}
-              <Button
-                styleType="outlined"
-                isIconButton
-                onClick={toggleDescription}
-              >
-                <ChevronDownIcon
-                  className={twMerge(
-                    `h-6 transition-all duration-300 ${isDescriptionShown ? "rotate-0" : "rotate-180"}`,
-                  )}
-                />
-              </Button>
-            </div>
+                )}
+              </div>
+            )}
           </div>
           <AnimatePresence mode="sync">
             {isDescriptionShown && (
