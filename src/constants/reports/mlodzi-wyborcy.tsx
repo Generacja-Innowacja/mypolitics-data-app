@@ -66,7 +66,7 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
     },
     {
       name: "Nam Zależy",
-      logoUrl: "/assets/mlodzi-wyborcy/nam-zalezy.svg",
+      logoUrl: "/assets/mlodzi-wyborcy/nam-zalezy.png",
       url: "https://namzalezy.pl/",
     },
     {
