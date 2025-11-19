@@ -27,7 +27,7 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
     {
       name: "Our Future Foundation",
       logoUrl: "/assets/mlodzi-wyborcy/our-future-foundation.png",
-      url: "https://youngthink.pl",
+      url: "https://off.org.pl/",
     },
     {
       name: "Fundacja Venator",
