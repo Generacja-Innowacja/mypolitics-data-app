@@ -15,9 +15,69 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
   date: "Wrzesień 2025",
   partners: [
     {
+      name: "Ad Personam",
+      logoUrl: "/assets/mlodzi-wyborcy/ad-personam.png",
+      url: "https://ad.personam.pl/",
+    },
+    {
+      name: "Fundacja IBRiS",
+      logoUrl: "/assets/mlodzi-wyborcy/ibris.png",
+      url: "https://ibris.pl/",
+    },
+    {
+      name: "Our Future Foundation",
+      logoUrl: "/assets/mlodzi-wyborcy/our-future-foundation.png",
+      url: "https://off.org.pl/",
+    },
+    {
+      name: "Fundacja Venator",
+      logoUrl: "/assets/mlodzi-wyborcy/fundacja-venator.png",
+      url: "https://fundacjavenator.pl/",
+    },
+    {
+      name: "Stowarzyszenie Pravda",
+      logoUrl: "/assets/mlodzi-wyborcy/stowarzyszenie-pravda.png",
+      url: "https://pravda.org.pl/",
+    },
+    {
+      name: "Obserwator Gospodarczy",
+      logoUrl: "/assets/mlodzi-wyborcy/obserwator-gospodarczy.png",
+      url: "https://obserwatorgospodarczy.pl/",
+    },
+    {
+      name: "ORB",
+      logoUrl: "/assets/mlodzi-wyborcy/orb.png",
+      url: "https://www.youtube.com/@ORB_NEWS",
+    },
+    {
+      name: "PRZEkanał",
+      logoUrl: "/assets/mlodzi-wyborcy/PRZEkanal.png",
+      url: "https://www.youtube.com/@przekanal",
+    },
+    {
       name: "Young Think",
       logoUrl: "/assets/mlodzi-wyborcy/young-think.png",
       url: "https://youngthink.pl",
+    },
+    {
+      name: "android.com.pl",
+      logoUrl: "/assets/mlodzi-wyborcy/android-com-pl.png",
+      url: "https://android.com.pl/",
+    },
+    {
+      name: "Nam Zależy",
+      logoUrl: "/assets/mlodzi-wyborcy/nam-zalezy.png",
+      url: "https://namzalezy.pl/",
+    },
+    {
+      name: "politologia.org",
+      logoUrl: "/assets/mlodzi-wyborcy/politologia-org.png",
+      url: "https://politologia.org",
+    },
+    {
+      name: "Stowarzyszenie Racja",
+      logoUrl: "/assets/mlodzi-wyborcy/stowarzyszenie-racja.png",
+      url: "https://stowarzyszenieracja.pl/",
     },
   ],
   footer: [
