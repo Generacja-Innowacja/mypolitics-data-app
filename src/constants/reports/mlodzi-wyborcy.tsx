@@ -118,7 +118,8 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
           name: "Adrian Orłów",
           position: "Koordynator projektu",
           photoUrl: "/assets/people/adrian-orlow.png",
-          description: "",
+          description:
+            "Założyciel portalu myPolitics i Fundacji Generacja Innowacja. Główny koordynator raportu #MłodziWyborcy2025, odpowiedzialny za kształt badania i analizę danych.",
           socials: {
             linkedIn: "https://www.linkedin.com/in/adrianorlow/",
             twitterX: "https://x.com/adrianorlow",
@@ -134,7 +135,7 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
           position: "Head of Knowledge, analityk ds. politycznych",
           photoUrl: "/assets/people/maciej-jankowski.png",
           description:
-            "Head of Konwledge w Generacja Innowacja. Programista, specjalista ds. AI/ML. Analityk wykorzystujący narzędzia sztucznej inteligencji do analizy politycznej.",
+            "Head of Knowledge w Generacja Innowacja. Programista, specjalista ds. AI/ML. Analityk wykorzystujący narzędzia sztucznej inteligencji do analizy politycznej.",
           socials: {
             twitterX: "https://x.com/m_jankowski___",
           },
@@ -200,9 +201,32 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
           name: "Oskar Barcz",
           position: "Head of Engineering",
           photoUrl: "/assets/people/oskar-barcz.png",
-          description: "",
+          description:
+            "Wiceprezes Zarządu Fundacji, lider zespołów technicznych i architekt oprogramowania, który z pasją łączy świat komercyjnych innowacji z technologią w służbie społeczeństwu. Podczas tworzenia nowej platformy przetwarzania danych myPolitics zarządzał i mentorował 60-osobowy zespół wolontariuszy. Wykreował strategię technologiczną produktu i nadzorował realizację rozwiązań serwerowych.",
+          socials: {
+            github: "https://github.com/oskarbarcz",
+            linkedIn: "https://www.linkedin.com/in/oskarbarcz/",
+          },
+        },
+        {
+          name: "Adam Derkacz",
+          position: "Front-End Developer",
+          photoUrl: "/assets/people/adam-derkacz.png",
+          description:
+            "Front-end developer. Jest wolontariuszem od kwietnia 2025. Jego zainteresowania to kompozycja/produkcja muzyki oraz montaż wideo.",
           socials: {},
         },
+        {
+          name: "Daniel Kłoda",
+          position: "Back-End Developer",
+          photoUrl: "/assets/people/daniel-kloda.png",
+          description:
+            "Back-end developer i koordynator praktyk, który kocha muzykę oraz z pasją zanurza się w filmy, seriale i gry. Łączy techniczną precyzję z kreatywnymi inspiracjami.",
+          socials: {
+            linkedIn: "https://www.linkedin.com/in/daniel-k%C5%82oda-683423258",
+          },
+        },
+
         {
           name: "Kamil Naskręt",
           position: "Front-End Developer",
@@ -211,12 +235,23 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
           socials: {},
         },
         {
-          name: "Adam Derkacz",
+          name: "Łukasz Głaz",
           position: "Front-End Developer",
-          photoUrl: "/assets/people/adam-derkacz.png",
+          photoUrl: "/assets/people/lukasz-glaz.png",
           description:
-            "Front-End-Developer. Jestem wolontariuszem od kwietnia 2025. Moje zainteresowania to kompozycja/produkcja muzyki oraz montaż wideo.",
+            "Front-end developer z doświadczeniem w tworzeniu responsywnych stron i aplikacji internetowych. Tworzy nowoczesne interfejsy, łącząc estetykę z funkcjonalnością. Skupia się na dostarczaniu rozwiązań, które realnie wspierają użytkowników i rozwój projektów.",
           socials: {},
+        },
+        {
+          name: "Patryk Prewendowski",
+          position: "Head of Delivery",
+          photoUrl: "/assets/people/patryk-prewendowski.png",
+          description:
+            "Matematyk, inżynier oprogramowania, Head of Delivery w Fundacji Generacja Innowacja. Odpowiada za koordynację prac: zarządza zadaniami, wspiera wolontariuszy w ich wykonywaniu, opiekuje się praktykantami i nadzoruje ich działania, stanowi łącznik pomiędzy zespołami technicznymi, designerami i właścicielami produktów.",
+          socials: {
+            github: "https://github.com/prewendowski",
+            linkedIn: "https://www.linkedin.com/in/prewendowski",
+          },
         },
       ],
     },
