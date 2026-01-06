@@ -40,11 +40,6 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
       url: "https://pravda.org.pl/",
     },
     {
-      name: "Obserwator Gospodarczy",
-      logoUrl: "/assets/mlodzi-wyborcy/obserwator-gospodarczy.png",
-      url: "https://obserwatorgospodarczy.pl/",
-    },
-    {
       name: "ORB",
       logoUrl: "/assets/mlodzi-wyborcy/orb.png",
       url: "https://www.youtube.com/@ORB_NEWS",
@@ -53,21 +48,6 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
       name: "PRZEkanał",
       logoUrl: "/assets/mlodzi-wyborcy/PRZEkanal.png",
       url: "https://www.youtube.com/@przekanal",
-    },
-    {
-      name: "Young Think",
-      logoUrl: "/assets/mlodzi-wyborcy/young-think.png",
-      url: "https://youngthink.pl",
-    },
-    {
-      name: "android.com.pl",
-      logoUrl: "/assets/mlodzi-wyborcy/android-com-pl.png",
-      url: "https://android.com.pl/",
-    },
-    {
-      name: "Nam Zależy",
-      logoUrl: "/assets/mlodzi-wyborcy/nam-zalezy.png",
-      url: "https://namzalezy.pl/",
     },
     {
       name: "politologia.org",
