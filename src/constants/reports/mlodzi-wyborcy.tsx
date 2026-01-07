@@ -25,11 +25,6 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
       url: "https://ibris.pl/",
     },
     {
-      name: "Our Future Foundation",
-      logoUrl: "/assets/mlodzi-wyborcy/our-future-foundation.png",
-      url: "https://off.org.pl/",
-    },
-    {
       name: "Fundacja Venator",
       logoUrl: "/assets/mlodzi-wyborcy/fundacja-venator.png",
       url: "https://fundacjavenator.pl/",
