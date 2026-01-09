@@ -54,6 +54,26 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
       logoUrl: "/assets/mlodzi-wyborcy/stowarzyszenie-racja.png",
       url: "https://stowarzyszenieracja.pl/",
     },
+    {
+      name: "Mlode Kresy",
+      logoUrl: "/assets/mlodzi-wyborcy/mlode-kresy.png",
+      url: "https://mlodekresy.pl/",
+    },
+    {
+      name: "Kadeci RP",
+      logoUrl: "/assets/mlodzi-wyborcy/kadeci-rp.png",
+      url: "https://kadecirp.pl/",
+    },
+    {
+      name: "Young Think",
+      logoUrl: "/assets/mlodzi-wyborcy/young-think.png",
+      url: "https://youngthink.pl",
+    },
+    {
+      name: "android.com.pl",
+      logoUrl: "/assets/mlodzi-wyborcy/android-com-pl.png",
+      url: "https://android.com.pl/",
+    },
   ],
   footer: [
     {
