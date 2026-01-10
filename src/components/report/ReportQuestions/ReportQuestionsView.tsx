@@ -38,7 +38,12 @@ const ReportQuestions = ({ reportData, isLoading }: Props): JSX.Element => {
           />
         )}
         {isLoading && <ReportQuestionSelectorSkeleton />}
-        {!isLoading && <ReportQuestionAnswers question={currentQuestion} />}
+        {!isLoading && (
+          <ReportQuestionAnswers
+            question={currentQuestion}
+            experts={reportData?.experts}
+          />
+        )}
         {isLoading && <ReportQuestionAnswersSkeleton />}
       </div>
     </AnimateChangeInHeight>
