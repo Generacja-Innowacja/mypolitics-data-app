@@ -1,14 +1,16 @@
 import AnimateChangeInHeight from "@/components/shared/AnimateChangeInHeight";
-import { ReportQuestion } from "@/types/models/reportData";
+import { ReportExpert, ReportQuestion } from "@/types/models/reportData";
 import { getOrderedAnswers } from "../utils/getOrderedAnswers";
 import AnswersChart from "./AnswersChart";
 import SingleAnswer from "./SingleAnswer";
+import ReportComment from "./Comment";
 
 interface Props {
   question?: ReportQuestion;
+  experts?: ReportExpert[];
 }
 
-const ReportQuestionAnswers = ({ question }: Props): JSX.Element => {
+const ReportQuestionAnswers = ({ question, experts }: Props): JSX.Element => {
   const answers = getOrderedAnswers(question?.answers || []);
 
   return (
@@ -29,11 +31,17 @@ const ReportQuestionAnswers = ({ question }: Props): JSX.Element => {
           <AnswersChart answers={answers} />
         </div>
         {question?.explanation && (
-          <>
-            <div className="h-[1px] w-full bg-gray" />
-            <div className="whitespace-pre-line">{question.explanation}</div>
-          </>
+          <div className="border border-gray whitespace-pre-line p-6 rounded-3xl">
+            {question.explanation}
+          </div>
         )}
+        {(question?.comments || []).map((comment) => (
+          <ReportComment
+            key={comment.id}
+            comment={comment}
+            experts={experts || []}
+          />
+        ))}
       </div>
     </AnimateChangeInHeight>
   );

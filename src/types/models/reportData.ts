@@ -3,7 +3,7 @@ import { z } from "zod";
 export const reportCommentModel = z.object({
   id: z.string(),
   expertId: z.string(),
-  value: z.number(),
+  value: z.string(),
 });
 
 export const reportAnswerModel = z.object({
@@ -20,6 +20,7 @@ export const reportQuestionModel = z.object({
   highlighted: z.boolean().optional(),
   explanation: z.string().optional(),
   answers: z.array(reportAnswerModel),
+  comments: z.array(reportCommentModel),
 });
 
 export const reportExpertInfoModel = z.object({
@@ -27,6 +28,7 @@ export const reportExpertInfoModel = z.object({
   imageUrl: z.string(),
   description: z.string().optional(),
   role: z.string().optional(),
+  websiteUrl: z.string().optional(),
 });
 
 export const reportExpertModel = z.object({
@@ -44,3 +46,6 @@ export const reportDataModel = z.object({
 export type ReportData = z.infer<typeof reportDataModel>;
 export type ReportQuestion = z.infer<typeof reportQuestionModel>;
 export type ReportAnswer = z.infer<typeof reportAnswerModel>;
+export type ReportExpert = z.infer<typeof reportExpertModel>;
+export type ReportExpertInfo = z.infer<typeof reportExpertInfoModel>;
+export type ReportComment = z.infer<typeof reportCommentModel>;
