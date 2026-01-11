@@ -1,1 +1,1 @@
-export { default, ButtonSelectOption } from "./ButtonSelectView";
+export { default, type ButtonSelectOption } from "./ButtonSelectView";
