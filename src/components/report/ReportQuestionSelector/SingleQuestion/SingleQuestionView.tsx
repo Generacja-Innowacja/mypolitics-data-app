@@ -30,7 +30,7 @@ const SingleQuestion = ({
   return (
     <div
       className={twMerge(
-        `flex flex-col gap-4 justify-between md:gap-8 bg-white rounded-[32px] p-6 border border-dark-sea-storm/10 transition-opacity opacity-${isSelected ? 100 : 50} ${className}`,
+        `flex flex-col gap-4 justify-between md:gap-8 bg-white rounded-[32px] p-6 select-none border border-dark-sea-storm/10 transition-opacity opacity-${isSelected ? 100 : 50} ${className}`,
       )}
       style={style}
       onClick={onClick}

@@ -11,7 +11,7 @@ const SingleAnswer = ({ answer, index }: Props): JSX.Element => {
   return (
     <motion.div
       layout
-      className="flex items-center gap-4"
+      className="flex gap-2 flex-col sm:gap-4 sm:flex-row sm:items-center"
       exit={{ opacity: 0 }}
     >
       <ReportAnswerPill answer={answer} index={index} />
