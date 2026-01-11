@@ -12,7 +12,7 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
     </>
   ),
   logoUrl: "/assets/mlodzi-wyborcy/mlodzi-wyborcy-logo-light.svg",
-  date: "Wrzesień 2025",
+  date: "Styczeń 2026",
   partners: [
     {
       name: "Ad Personam",
