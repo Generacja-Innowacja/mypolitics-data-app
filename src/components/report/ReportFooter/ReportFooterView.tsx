@@ -1,4 +1,5 @@
 import { CommonReport } from "@/types/report";
+import React from "react";
 
 interface Props {
   report: CommonReport;
@@ -11,16 +12,13 @@ const ReportFooter = ({ report }: Props): JSX.Element => {
         const isLastIndex = index === report.footer.length - 1;
 
         return (
-          <>
-            <div
-              key={index}
-              className="flex gap-2 flex-col text-left text-dark-sea"
-            >
+          <React.Fragment key={index}>
+            <div className="flex gap-2 flex-col text-left text-dark-sea">
               {item.icon && <div className="mb-2">{item.icon}</div>}
               <span>{item.description}</span>
             </div>
             {!isLastIndex && <hr className="border-t border-bluish-gray" />}
-          </>
+          </React.Fragment>
         );
       })}
     </div>

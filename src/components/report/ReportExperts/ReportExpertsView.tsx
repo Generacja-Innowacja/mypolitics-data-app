@@ -15,6 +15,7 @@ const ReportExpertsView = ({ reportData, isLoading }: Props): JSX.Element => {
     () =>
       (reportData?.experts || []).map((expert) => ({
         id: expert.id,
+        review: expert.review,
         ...parseExpertToAuthor(expert),
       })),
     [reportData?.experts],
@@ -24,8 +25,18 @@ const ReportExpertsView = ({ reportData, isLoading }: Props): JSX.Element => {
     <AnimateChangeInHeight duration={0.15}>
       <div className="flex flex-col gap-4">
         {!isLoading &&
-          expertAuthors.map(({ id, ...author }) => (
-            <ReportAuthor key={id} author={author} />
+          expertAuthors.map(({ id, review, ...author }) => (
+            <ReportAuthor key={id} author={author}>
+              {review && (
+                <>
+                  <div className="w-full h-[1px] bg-gray" />
+                  <div>
+                    <b>Komentarz do badania:</b>
+                    <p>{review}</p>
+                  </div>
+                </>
+              )}
+            </ReportAuthor>
           ))}
         {isLoading && <ReportExpertsSkeleton />}
       </div>

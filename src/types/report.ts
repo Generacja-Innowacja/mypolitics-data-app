@@ -38,8 +38,9 @@ export interface ReportDataLink {
   title: string;
   description: string | JSX.Element;
   file?: {
-    extension: string;
-    sizeMB: number;
+    extension?: string;
+    sizeMB?: number;
+    downloadText?: string;
     downloadUrl: string;
   };
 }

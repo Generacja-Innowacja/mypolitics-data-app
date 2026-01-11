@@ -4,8 +4,8 @@ import { useRef } from "react";
 import { twMerge } from "tw-merge";
 import SingleQuestion from "./SingleQuestion";
 import { scrollQuestionIntoView } from "./utils/scrollQuestionIntoView";
-import { useHandleScrollSnapQuestionIdUpdate } from "./utils/useHandleScrollSnapQuestionIdUpdate";
 import { useQuestionsExpectedHeight } from "./utils/useQuestionsExpectedHeight";
+import { useObserveQuestions } from "./utils/useObserveQuestions";
 
 interface Props {
   reportData: ReportData;
@@ -23,9 +23,9 @@ const ReportQuestionSelector = ({
     questionsWrapperRef,
   });
 
-  useHandleScrollSnapQuestionIdUpdate({
+  useObserveQuestions({
+    questions: reportData?.questions,
     setSelectedQuestionId,
-    questionsWrapperRef,
   });
 
   const handleQuestionClick = (questionId: string) => {

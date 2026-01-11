@@ -12,7 +12,7 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
     </>
   ),
   logoUrl: "/assets/mlodzi-wyborcy/mlodzi-wyborcy-logo-light.svg",
-  date: "Wrzesień 2025",
+  date: "Styczeń 2026",
   partners: [
     {
       name: "Ad Personam",
@@ -291,6 +291,20 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
         sizeMB: 8,
         downloadUrl:
           "https://drive.google.com/file/d/1cntF3uabnsVAQu2AthlyWVIGueap6RsO/view?usp=sharing",
+      },
+    },
+    {
+      title: "Materiały prasowe",
+      description: (
+        <>
+          Zbiór materiałów graficznych gotowych do użycia w ramach publikacji
+          prasowych.
+        </>
+      ),
+      file: {
+        downloadText: "Folder",
+        downloadUrl:
+          "https://drive.google.com/drive/folders/15nl4_UH4GXKp1V3V8hEO1reNM35e91dG",
       },
     },
     {

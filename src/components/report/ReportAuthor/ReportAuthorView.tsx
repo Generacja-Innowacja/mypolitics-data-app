@@ -13,9 +13,10 @@ import { twMerge } from "tw-merge";
 
 interface Props {
   author: ReportAuthorType;
+  children?: React.ReactNode;
 }
 
-const ReportAuthor = ({ author }: Props): JSX.Element => {
+const ReportAuthor = ({ author, children }: Props): JSX.Element => {
   const isAnyButton =
     author.socials.linkedIn ||
     author.socials.twitterX ||
@@ -133,6 +134,7 @@ const ReportAuthor = ({ author }: Props): JSX.Element => {
                     {author.organisation.description}
                   </>
                 )}
+                {children}
               </motion.div>
             )}
           </AnimatePresence>

@@ -32,7 +32,7 @@ const ReportPage = ({ reportData, reportConfig }: Props): JSX.Element => {
             isLoading={reportData.isLoading}
           />
         </ReportSection>
-        <ReportSection title="Eksperci">
+        <ReportSection title="Komentarze ekspertów">
           <ReportExperts
             reportData={reportData.data}
             isLoading={reportData.isLoading}

@@ -1,19 +1,21 @@
 import { Metadata } from "next";
 
 export const SITE_METADATA: Metadata = {
-  title: "myPolitics Data",
-  description: "Portal danych myPolitics",
-  keywords: [],
+  title: "Młodzi Wyborcy 2025 | myPolitics Data",
+  description:
+    "Poglądy młodych Polek i Polaków na najważniejsze sprawy społeczne i polityczne.",
+  keywords: ["badanie", "raport", "mlodzi", "wyborcy"],
   creator: "Generacja Innowacja",
   openGraph: {
     type: "website",
-    url: "https://mypolitics.pl/data",
-    title: "myPolitics Data",
-    description: "Portal danych myPolitics",
+    url: "https://data.mypolitics.pl/",
+    title: "Młodzi Wyborcy 2025 | myPolitics Data",
+    description:
+      "Poglądy młodych Polek i Polaków na najważniejsze sprawy społeczne i polityczne.",
     siteName: "myPolitics Data",
     images: [
       {
-        url: "https://mypolitics.pl/data/thumbnail.png",
+        url: "https://data.mypolitics.pl/thumbnail.png",
       },
     ],
   },
