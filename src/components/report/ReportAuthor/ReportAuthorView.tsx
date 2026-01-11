@@ -17,7 +17,10 @@ interface Props {
 
 const ReportAuthor = ({ author }: Props): JSX.Element => {
   const isAnyButton =
-    author.socials.linkedIn || author.socials.twitterX || author.description;
+    author.socials.linkedIn ||
+    author.socials.twitterX ||
+    author.description ||
+    author.organisation;
   const [isDescriptionShown, setIsDescriptionShown] = useState(false);
 
   const toggleDescription = () => setIsDescriptionShown((v) => !v);
@@ -46,7 +49,7 @@ const ReportAuthor = ({ author }: Props): JSX.Element => {
               </div>
               <div className="flex flex-col">
                 <div className="font-bold">{author.name}</div>
-                <div>{author.position}</div>
+                {author.position && <div>{author.position}</div>}
               </div>
             </div>
             {isAnyButton && (
@@ -84,7 +87,7 @@ const ReportAuthor = ({ author }: Props): JSX.Element => {
                     </Button>
                   </Link>
                 )}
-                {author.description && (
+                {(author.description || author.organisation) && (
                   <Button
                     styleType="outlined"
                     isIconButton
@@ -108,8 +111,28 @@ const ReportAuthor = ({ author }: Props): JSX.Element => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.15 }}
+                className="flex flex-col gap-4"
               >
                 {author.description}
+                {author.organisation && (
+                  <>
+                    <div className="w-full h-[1px] bg-gray" />
+                    <Link
+                      href={author.organisation.websiteUrl || ""}
+                      target="_blank"
+                    >
+                      {/* disabled due to non-deterministic sizings */}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        className="block h-6"
+                        src={author.organisation.imageUrl}
+                        alt={author.organisation.name}
+                        title={author.organisation.name}
+                      />
+                    </Link>
+                    {author.organisation.description}
+                  </>
+                )}
               </motion.div>
             )}
           </AnimatePresence>

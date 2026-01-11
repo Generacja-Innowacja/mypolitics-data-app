@@ -10,14 +10,21 @@ export interface ReportFooterSection {
 }
 
 export interface ReportAuthor {
+  id?: string;
   name: string;
-  position: string;
+  position?: string;
   photoUrl: string;
   description?: string | JSX.Element;
   socials: {
     linkedIn?: string;
     twitterX?: string;
     github?: string;
+  };
+  organisation?: {
+    name: string;
+    description?: string;
+    websiteUrl?: string;
+    imageUrl: string;
   };
 }
 
