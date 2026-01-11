@@ -32,7 +32,7 @@ const ReportExpertsView = ({ reportData, isLoading }: Props): JSX.Element => {
                   <div className="w-full h-[1px] bg-gray" />
                   <div>
                     <b>Komentarz do badania:</b>
-                    <p>{review}</p>
+                    <p className="whitespace-pre-line">{review}</p>
                   </div>
                 </>
               )}
