@@ -7,6 +7,7 @@ import { ReportData } from "@/types/models/reportData";
 import { CommonReport } from "@/types/report";
 import ReportAuthorGroup from "../ReportAuthorGroup";
 import ReportFindings from "../ReportFindings";
+import ReportExperts from "../ReportExperts";
 
 interface Props {
   reportConfig: CommonReport;
@@ -27,6 +28,12 @@ const ReportPage = ({ reportData, reportConfig }: Props): JSX.Element => {
         />
         <ReportSection title="Analiza pytań">
           <ReportQuestions
+            reportData={reportData.data}
+            isLoading={reportData.isLoading}
+          />
+        </ReportSection>
+        <ReportSection title="Eksperci">
+          <ReportExperts
             reportData={reportData.data}
             isLoading={reportData.isLoading}
           />
