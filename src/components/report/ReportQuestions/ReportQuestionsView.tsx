@@ -33,7 +33,9 @@ const ReportQuestions = ({ reportData, isLoading }: Props): JSX.Element => {
             <ButtonSelect
               options={FILTER_OPTIONS}
               selectedOptionId={questionsFilter}
-              onOptionSelect={setQuestionsFilter}
+              onOptionSelect={(id: string) =>
+                setQuestionsFilter(id as QuestionsFilter)
+              }
             />
             <ReportQuestionSelector
               questions={questions}
