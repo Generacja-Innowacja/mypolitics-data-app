@@ -20,10 +20,13 @@ const ReportDataLink = ({ dataLink }: Props): JSX.Element => {
       <Button tag="div" styleType="primary">
         <DownloadIcon />
         <span>
-          {dataLink.file.extension.toUpperCase()}{" "}
-          <span className="opacity-75 font-light">
-            ({dataLink.file.sizeMB}MB)
-          </span>
+          {dataLink.file.extension && dataLink.file.extension.toUpperCase()}
+          {dataLink.file.sizeMB && (
+            <span className="opacity-75 font-light">
+              &nbsp;({dataLink.file.sizeMB}MB)
+            </span>
+          )}
+          {dataLink.file.downloadText && dataLink.file.downloadText}
         </span>
       </Button>
     </Link>

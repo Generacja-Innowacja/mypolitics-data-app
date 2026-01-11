@@ -294,6 +294,20 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
       },
     },
     {
+      title: "Materiały prasowe",
+      description: (
+        <>
+          Zbiór materiałów graficznych gotowych do użycia w ramach publikacji
+          prasowych.
+        </>
+      ),
+      file: {
+        downloadText: "Folder",
+        downloadUrl:
+          "https://drive.google.com/drive/folders/15nl4_UH4GXKp1V3V8hEO1reNM35e91dG",
+      },
+    },
+    {
       title: "Pełny zbiór",
       description: (
         <>
