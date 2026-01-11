@@ -1,5 +1,5 @@
 import AnimateChangeInHeight from "@/components/shared/AnimateChangeInHeight";
-import { ReportData } from "@/types/models/reportData";
+import { ReportData, ReportQuestion } from "@/types/models/reportData";
 import { useRef } from "react";
 import { twMerge } from "tw-merge";
 import SingleQuestion from "./SingleQuestion";
@@ -8,13 +8,13 @@ import { useQuestionsExpectedHeight } from "./utils/useQuestionsExpectedHeight";
 import { useObserveQuestions } from "./utils/useObserveQuestions";
 
 interface Props {
-  reportData: ReportData;
+  questions: ReportQuestion[];
   selectedQuestionId: string;
   setSelectedQuestionId(id: string): void;
 }
 
 const ReportQuestionSelector = ({
-  reportData,
+  questions,
   selectedQuestionId,
   setSelectedQuestionId,
 }: Props): JSX.Element => {
@@ -24,7 +24,7 @@ const ReportQuestionSelector = ({
   });
 
   useObserveQuestions({
-    questions: reportData?.questions,
+    questions: questions,
     setSelectedQuestionId,
   });
 
@@ -40,7 +40,7 @@ const ReportQuestionSelector = ({
         className="overflow-y-auto snap-y snap-mandatory flex flex-col gap-4 rounded-[32px]"
         style={{ height: expectedHeight === 0 ? "212px" : expectedHeight * 2 }}
       >
-        {reportData.questions.map((question) => {
+        {questions.map((question) => {
           const isSelected = question.id === selectedQuestionId;
 
           return (

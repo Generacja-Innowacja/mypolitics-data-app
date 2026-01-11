@@ -7,6 +7,10 @@ import ReportQuestionAnswers, {
 import ReportQuestionSelector, {
   ReportQuestionSelectorSkeleton,
 } from "../ReportQuestionSelector";
+import { QuestionsFilter } from "./ReportQuestionsTypes";
+import ButtonSelect from "@/components/shared/ButtonSelect";
+import { FILTER_OPTIONS } from "./ReportQuestionsConstants";
+import { useFilteredQuestions } from "./utils/useFilteredQuestions";
 
 interface Props {
   reportData?: ReportData;
@@ -14,31 +18,32 @@ interface Props {
 }
 
 const ReportQuestions = ({ reportData, isLoading }: Props): JSX.Element => {
+  const [questionsFilter, setQuestionsFilter] =
+    useState<QuestionsFilter>("all");
+  const questions = useFilteredQuestions({ reportData, questionsFilter });
   const [selectedQuestionId, setSelectedQuestionId] = useState("");
   const currentQuestion =
-    reportData && reportData.questions.find((q) => q.id === selectedQuestionId);
-
-  useEffect(() => {
-    const firstQuestionId = reportData?.questions[0]?.id;
-    if (!firstQuestionId) {
-      return;
-    }
-
-    setSelectedQuestionId(firstQuestionId);
-  }, [reportData]);
+    questions && questions.find((q) => q.id === selectedQuestionId);
 
   return (
     <AnimateChangeInHeight duration={0.15}>
       <div className="flex flex-col gap-6">
-        {reportData && !isLoading && (
-          <ReportQuestionSelector
-            reportData={reportData}
-            selectedQuestionId={selectedQuestionId}
-            setSelectedQuestionId={setSelectedQuestionId}
-          />
+        {questions.length > 0 && !isLoading && (
+          <>
+            <ButtonSelect
+              options={FILTER_OPTIONS}
+              selectedOptionId={questionsFilter}
+              onOptionSelect={setQuestionsFilter}
+            />
+            <ReportQuestionSelector
+              questions={questions}
+              selectedQuestionId={selectedQuestionId}
+              setSelectedQuestionId={setSelectedQuestionId}
+            />
+          </>
         )}
         {isLoading && <ReportQuestionSelectorSkeleton />}
-        {!isLoading && (
+        {!isLoading && currentQuestion && (
           <ReportQuestionAnswers
             question={currentQuestion}
             experts={reportData?.experts}
