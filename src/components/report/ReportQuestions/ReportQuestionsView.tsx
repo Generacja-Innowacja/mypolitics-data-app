@@ -1,6 +1,6 @@
 import AnimateChangeInHeight from "@/components/shared/AnimateChangeInHeight";
 import { ReportData } from "@/types/models/reportData";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ReportQuestionAnswers, {
   ReportQuestionAnswersSkeleton,
 } from "../ReportQuestionAnswers";

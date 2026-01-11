@@ -1,5 +1,5 @@
 import AnimateChangeInHeight from "@/components/shared/AnimateChangeInHeight";
-import { ReportData, ReportQuestion } from "@/types/models/reportData";
+import { ReportQuestion } from "@/types/models/reportData";
 import { useRef } from "react";
 import { twMerge } from "tw-merge";
 import SingleQuestion from "./SingleQuestion";
