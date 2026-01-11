@@ -1,6 +1,6 @@
 import { ButtonSelectOption } from "@/components/shared/ButtonSelect";
 
-export const FILTER_OPTIONS: ButtonSelectOption = [
+export const FILTER_OPTIONS: ButtonSelectOption[] = [
   {
     id: "all",
     label: "Wszystkie",
