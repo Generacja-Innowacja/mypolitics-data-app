@@ -19,15 +19,19 @@ const updateGTMConsent = () => {
     const functionalityStorage = preferencesAccepted ? "granted" : "denied";
     const personalizationStorage = preferencesAccepted ? "granted" : "denied";
 
-    window.dataLayer.push("consent", "update", {
-      ad_storage: adStorage,
-      ad_user_data: adUserData,
-      ad_personalization: adPersonalization,
-      analytics_storage: analyticsStorage,
-      functionality_storage: functionalityStorage,
-      personalization_storage: personalizationStorage,
-      security_storage: "granted",
-    });
+    window.dataLayer.push([
+      "consent",
+      "update",
+      {
+        ad_storage: adStorage,
+        ad_user_data: adUserData,
+        ad_personalization: adPersonalization,
+        analytics_storage: analyticsStorage,
+        functionality_storage: functionalityStorage,
+        personalization_storage: personalizationStorage,
+        security_storage: "granted",
+      },
+    ]);
   }
 };
 
