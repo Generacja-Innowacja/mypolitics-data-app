@@ -14,12 +14,16 @@ const updateGTMConsent = () => {
 
     const analyticsStorage = statisticsAccepted ? "granted" : "denied";
     const adStorage = marketingAccepted ? "granted" : "denied";
+    const adUserData = marketingAccepted ? "granted" : "denied";
+    const adPersonalization = marketingAccepted ? "granted" : "denied";
     const functionalityStorage = preferencesAccepted ? "granted" : "denied";
     const personalizationStorage = preferencesAccepted ? "granted" : "denied";
 
     window.dataLayer.push({
       event: "consent_update",
       ad_storage: adStorage,
+      ad_user_data: adUserData,
+      ad_personalization: adPersonalization,
       analytics_storage: analyticsStorage,
       functionality_storage: functionalityStorage,
       personalization_storage: personalizationStorage,
