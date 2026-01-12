@@ -25,16 +25,16 @@ Project is using Node.js and TypeScript in versions listed below:
 
 Main dependencies are Next.js and React in versions listed below.
 
-| Vendor  | Version |
-| ------- | ------- |
-| Next.js | ^14.x |
-| React   | ^18.x |
-| Tailwind CSS | ^3.x |
-| Chart.js | ^4.x |
-| React-Chartjs-2 | ^5.x |
-| Motion | ^12.x |
-| Zod     | ^4.x |
-| Axios   | ^1.x |
+| Vendor          | Version |
+| --------------- | ------- |
+| Next.js         | ^14.x   |
+| React           | ^18.x   |
+| Tailwind CSS    | ^3.x    |
+| Chart.js        | ^4.x    |
+| React-Chartjs-2 | ^5.x    |
+| Motion          | ^12.x   |
+| Zod             | ^4.x    |
+| Axios           | ^1.x    |
 
 ### Package descriptions
 
@@ -66,21 +66,21 @@ This app uses Node.js and Yarn package manager. In order to set up project, foll
 
 3. Clone project by running:
 
-    ```shell
-    git clone <your-repository-url>
-    ```
+   ```shell
+   git clone <your-repository-url>
+   ```
 
 4. Navigate to the project directory:
 
-    ```shell
-    cd nextjs-boilerplate
-    ```
+   ```shell
+   cd nextjs-boilerplate
+   ```
 
 5. Install dependencies using Yarn:
 
-    ```shell
-    yarn install
-    ```
+   ```shell
+   yarn install
+   ```
 
 ## Running the project
 
