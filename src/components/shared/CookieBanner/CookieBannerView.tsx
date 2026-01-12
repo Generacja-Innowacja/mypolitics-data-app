@@ -6,36 +6,29 @@ import "./cookie-banner.css";
 
 import "vanilla-cookieconsent/dist/cookieconsent.css";
 
-const updateGTMConsent = () => {
-  if (typeof window !== "undefined" && window.dataLayer) {
-    const statisticsAccepted = CookieConsent.acceptedCategory("statistics");
-    const marketingAccepted = CookieConsent.acceptedCategory("marketing");
-    const preferencesAccepted = CookieConsent.acceptedCategory("preferences");
-
-    const analyticsStorage = statisticsAccepted ? "granted" : "denied";
-    const adStorage = marketingAccepted ? "granted" : "denied";
-    const adUserData = marketingAccepted ? "granted" : "denied";
-    const adPersonalization = marketingAccepted ? "granted" : "denied";
-    const functionalityStorage = preferencesAccepted ? "granted" : "denied";
-    const personalizationStorage = preferencesAccepted ? "granted" : "denied";
-
-    window.dataLayer.push([
-      "consent",
-      "update",
-      {
-        ad_storage: adStorage,
-        ad_user_data: adUserData,
-        ad_personalization: adPersonalization,
-        analytics_storage: analyticsStorage,
-        functionality_storage: functionalityStorage,
-        personalization_storage: personalizationStorage,
-        security_storage: "granted",
-      },
-    ]);
-  }
-};
-
 export const CookieBanner: React.FC = () => {
+  const updateGTMConsent = () => {
+    if (typeof window !== "undefined" && window.dataLayer) {
+      const statisticsAccepted = CookieConsent.acceptedCategory("statistics");
+      const marketingAccepted = CookieConsent.acceptedCategory("marketing");
+      const preferencesAccepted = CookieConsent.acceptedCategory("preferences");
+
+      window.dataLayer.push([
+        "consent",
+        "update",
+        {
+          ad_storage: marketingAccepted ? "granted" : "denied",
+          ad_user_data: marketingAccepted ? "granted" : "denied",
+          ad_personalization: marketingAccepted ? "granted" : "denied",
+          analytics_storage: statisticsAccepted ? "granted" : "denied",
+          functionality_storage: preferencesAccepted ? "granted" : "denied",
+          personalization_storage: preferencesAccepted ? "granted" : "denied",
+          security_storage: "granted",
+        },
+      ]);
+    }
+  };
+
   useEffect(() => {
     CookieConsent.run({
       disablePageInteraction: true,
@@ -138,20 +131,15 @@ export const CookieBanner: React.FC = () => {
         },
       },
 
-      /**
-       * onConsent callback: Triggered when user provides consent or on every page load
-       * Updates GTM Consent Mode to enable/disable GA4 and other tracking tags
-       */
       onConsent: function () {
+        updateGTMConsent();
+      },
+
+      onChange: function () {
         updateGTMConsent();
       },
     });
 
-    /**
-     * Restore consent state on page reload
-     * If user previously granted consent, update GTM immediately
-     * This ensures GA4 tracking resumes correctly after page navigation
-     */
     setTimeout(() => {
       if (
         CookieConsent.acceptedCategory("statistics") ||
