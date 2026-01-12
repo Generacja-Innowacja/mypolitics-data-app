@@ -19,8 +19,7 @@ const updateGTMConsent = () => {
     const functionalityStorage = preferencesAccepted ? "granted" : "denied";
     const personalizationStorage = preferencesAccepted ? "granted" : "denied";
 
-    window.dataLayer.push({
-      event: "consent_update",
+    window.dataLayer.push("consent", "update", {
       ad_storage: adStorage,
       ad_user_data: adUserData,
       ad_personalization: adPersonalization,
