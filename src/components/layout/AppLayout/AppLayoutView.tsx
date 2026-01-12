@@ -4,6 +4,7 @@ import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Roboto } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const roboto = Roboto({
   subsets: ["latin", "latin-ext"],
@@ -14,6 +15,7 @@ const roboto = Roboto({
 export function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pl" className={roboto.className}>
+      <GoogleTagManager gtmId="GTM-T765V9Z5" />
       <body className="p-0">
         <div className="flex flex-col gap-4 w-full justify-center md:gap-6 min-h-screen">
           <div className="flex flex-col gap-4 w-full mx-auto">
