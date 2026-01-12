@@ -49,7 +49,7 @@ export const CookieBanner: React.FC = () => {
             consentModal: {
               title: "Pliki cookie",
               description:
-                'Używamy plików cookie, aby poprawić Twoje doświadczenia na stronie. Przeczytaj więcej w naszej <a href="/legal/cookie-policy">Polityce plików cookie</a>.',
+                'Używamy plików cookie, aby poprawić Twoje doświadczenia na stronie. Przeczytaj więcej w naszej <a href="https://mypolitics.pl/privacy.pdf">Polityce plików cookie</a>.',
               acceptAllBtn: "Zaakceptuj wszystkie",
               acceptNecessaryBtn: "Odrzuć wszystkie",
               showPreferencesBtn: "Zarządzaj preferencjami",
