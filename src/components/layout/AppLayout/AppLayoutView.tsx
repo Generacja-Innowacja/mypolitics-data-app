@@ -17,8 +17,6 @@ const roboto = Roboto({
 export function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pl" className={roboto.className}>
-      {/* Initialize GTM with default denied consent before loading */}
-      {/* This script must run before GTM loads to set default consent */}
       <Script
         id="gtm-consent-init"
         strategy="afterInteractive"

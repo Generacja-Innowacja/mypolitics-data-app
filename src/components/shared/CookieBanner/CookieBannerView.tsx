@@ -6,7 +6,6 @@ import "./cookie-banner.css";
 
 import "vanilla-cookieconsent/dist/cookieconsent.css";
 
-// Helper function to update GTM consent mode
 const updateGTMConsent = () => {
   if (typeof window !== "undefined" && window.dataLayer) {
     const statisticsAccepted = CookieConsent.acceptedCategory("statistics");
@@ -72,7 +71,7 @@ export const CookieBanner: React.FC = () => {
             consentModal: {
               title: "Pliki cookie",
               description:
-                'Używamy plików cookie, aby poprawić Twoje doświadczenia na stronie. Przeczytaj więcej w naszej <a href="https://mypolitics.pl/privacy.pdf">Polityce plików cookie</a>.',
+                'Używamy plików cookie, aby poprawić Twoje doświadczenia na stronie. Do zbierania danych statystycznych wykorzystujemy Google Analytics 4 (GA4) przez Google Tag Manager (GTM). Przeczytaj więcej w naszej <a href="https://mypolitics.pl/privacy.pdf">Polityce plików cookie</a>.',
               acceptAllBtn: "Zaakceptuj wszystkie",
               acceptNecessaryBtn: "Odrzuć wszystkie",
               showPreferencesBtn: "Zarządzaj preferencjami",
@@ -86,7 +85,7 @@ export const CookieBanner: React.FC = () => {
               sections: [
                 {
                   description:
-                    'Pliki cookie to pliki tekstowe umieszczane na Twoim urządzeniu przez odwiedzane strony internetowe lub poprzez kliknięcie linku do strony w wiadomości e-mail. Służą do zapewnienia funkcjonalności strony oraz dostarczania informacji właścicielom witryn. Więcej informacji oraz możliwość zmiany preferencji dotyczących plików cookie znajdziesz w naszej <a href="/legal/cookie-policy">Polityce plików cookie</a>.',
+                    'Pliki cookie to pliki tekstowe umieszczane na Twoim urządzeniu przez odwiedzane strony internetowe lub poprzez kliknięcie linku do strony w wiadomości e-mail. Służą do zapewnienia funkcjonalności strony oraz dostarczania informacji właścicielom witryn. Więcej informacji oraz możliwość zmiany preferencji dotyczących plików cookie znajdziesz w naszej <a href="https://mypolitics.pl/privacy.pdf">Polityce plików cookie</a>.',
                 },
                 {
                   title: "Niezbędne",
@@ -103,7 +102,7 @@ export const CookieBanner: React.FC = () => {
                 {
                   title: "Statystyki",
                   description:
-                    "Pliki cookie statystyczne pomagają nam zrozumieć, w jaki sposób odwiedzający korzystają z naszej strony, zbierając i raportując informacje w sposób anonimowy.",
+                    "Pliki cookie statystyczne pomagają nam zrozumieć, w jaki sposób odwiedzający korzystają z naszej strony, zbierając i raportując informacje w sposób anonimowy. Używamy Google Analytics 4 (GA4) i Google Tag Manager (GTM) do zbierania tych danych.",
                   linkedCategory: "statistics",
                 },
                 {
@@ -132,16 +131,20 @@ export const CookieBanner: React.FC = () => {
         },
       },
 
+      /**
+       * onConsent callback: Triggered when user provides consent or on every page load
+       * Updates GTM Consent Mode to enable/disable GA4 and other tracking tags
+       */
       onConsent: function () {
-        // Update GTM consent mode based on user choices
-        // This is called both on first consent and on every page load
         updateGTMConsent();
       },
     });
 
-    // Check if consent was already given (on page reload) and update GTM
-    // This handles the case where consent was set before the component mounted
-    // Use a small timeout to ensure CookieConsent is fully initialized
+    /**
+     * Restore consent state on page reload
+     * If user previously granted consent, update GTM immediately
+     * This ensures GA4 tracking resumes correctly after page navigation
+     */
     setTimeout(() => {
       if (
         CookieConsent.acceptedCategory("statistics") ||
