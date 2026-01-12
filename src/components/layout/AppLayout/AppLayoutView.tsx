@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CookieBanner } from "@/components/shared/CookieBanner";
 import { Roboto } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 
@@ -26,6 +27,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             <Footer />
           </div>
         </div>
+        <CookieBanner />
       </body>
     </html>
   );

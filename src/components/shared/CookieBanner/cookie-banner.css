@@ -1,0 +1,54 @@
+#cc-main,
+#cc-main .cm,
+#cc-main .pm {
+    --cc-modal-transition-duration: 0;
+}
+
+#cc-main .cm {
+    box-shadow: unset !important;
+    border: 1px solid #D4E1E4;
+}
+
+#cm__title {
+    font-weight: bold !important;
+    color: #004554 !important;
+}
+
+#cm__desc {
+    opacity: 0.9 !important;
+    color: #004554 !important;
+}
+
+.cm__btn-group>button {
+    font-weight: bold !important;
+}
+
+#cc-main {
+    --cc-modal-border-radius: 32px;
+    --cc-btn-border-radius: 32px;
+    --cc-modal-margin: 32px;
+
+    --cc-primary-color: #004554;
+    --cc-secondary-color: #004554;
+
+    --cc-btn-primary-bg: #004554;
+    --cc-btn-primary-border-color: transparent;
+    --cc-btn-primary-hover-bg: #195765;
+    --cc-btn-primary-hover-border-color: transparent;
+    --cc-btn-primary-color: #ffffff;
+
+    --cc-btn-secondary-bg: #D3D9DA;
+    --cc-btn-secondary-border-color: transparent;
+    --cc-btn-secondary-hover-bg: #BECBCD;
+    --cc-btn-secondary-hover-border-color: transparent;
+    --cc-btn-secondary-color: #004554;
+    --cc-btn-secondary-hover-color: #004554;
+
+    --cc-separator-border-color: #D4E1E4;
+    --cc-toggle-on-bg: #004554;
+    --cc-toggle-off-bg: #ECF0F2;
+    --cc-toggle-border-color: #D4E1E4;
+    
+    --cc-bg: #F9FBFB;
+    --cc-text: #004554;
+}
