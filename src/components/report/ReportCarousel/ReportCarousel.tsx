@@ -20,7 +20,7 @@ const ReportCarousel = () => {
             }),
         ]
     );
-//-mt-[64px]
+
     return (
         <div className="w-full select-none border-b border-bluish-gray py-[32px]">
             <div className="overflow-hidden" ref={emblaRef}>

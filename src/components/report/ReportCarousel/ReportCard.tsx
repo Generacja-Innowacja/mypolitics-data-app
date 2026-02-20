@@ -45,7 +45,7 @@ const ReportCard = ({
                 tag="div"
                 styleType="outlined"
                 className="flex-shrink-0 overflow-hidden text-sea-storm border border-bluish-gray p-[24px] h-[118px] md:h-[204px] w-[384px]"
-                style={{ ...backgroundStyle, flex: "0 0 minmax(100%, 384px)",  minWidth: "calc(100% - 32px)" }}
+                style={{ ...backgroundStyle, flex: "0 0 minmax(100%, 384px)", minWidth: "calc(100% - 32px)" }}
             >
                 <div className="flex flex-col justify-between h-full">
                     <h3 className="text-[16px] md:text-[24px] font-bold leading-[1.2] md:line-clamp-3 line-clamp-2">
