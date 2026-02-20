@@ -343,17 +343,20 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
     },
     {
       organisation: "Android.com.pl",
-      title: "„Zetki” sprawiają sprawę jasno. Nowy raport pokazuje, że wcale nie chodzi o bunt",
+      title:
+        "„Zetki” sprawiają sprawę jasno. Nowy raport pokazuje, że wcale nie chodzi o bunt",
       url: "https://android.com.pl/finanse/1009483-raport-mlodzi-wyborcy-25-raport/",
       logo: "/assets/reports/media-logo/logo_android-com.png",
-      background: "/assets/reports/media-bg/bg_zetki-sprawiaja-sprawe-jasno-nowy-raport-pokazuje-ze-wcale-nie-chodzi-o-bunt.png"
+      background:
+        "/assets/reports/media-bg/bg_zetki-sprawiaja-sprawe-jasno-nowy-raport-pokazuje-ze-wcale-nie-chodzi-o-bunt.png",
     },
     {
       organisation: "XYZ",
       title: "Triumf kandydata „nie wiem”. Jak głosują młodzi?",
       url: "https://xyz.pl/triumf-kandydata-nie-wiem-jak-glosuja-mlodzi/",
       logo: "/assets/reports/media-logo/logo_xyz.png",
-      background: "/assets/reports/media-bg/bg_triumf-kandydata-nie-wiem-jak-glosuja-mlodzi.png"
+      background:
+        "/assets/reports/media-bg/bg_triumf-kandydata-nie-wiem-jak-glosuja-mlodzi.png",
     },
     {
       organisation: "myPolitics",
@@ -372,7 +375,8 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
       title: "Przyjęcie euro przez Polskę? Młodzi są stanowczo na nie!",
       url: "https://obserwatorgospodarczy.pl/2025/05/31/przyjecie-euro-przez-polske-mlodzi-sa-stanowczo-na-nie/",
       logo: "/assets/reports/media-logo/logo_obserwator-gospodarczy.png",
-      background: "assets/reports/media-bg/bg_przyjecie-euro-przez-polske-mlodzi-sa-stanowczo-na-nie.png"
+      background:
+        "assets/reports/media-bg/bg_przyjecie-euro-przez-polske-mlodzi-sa-stanowczo-na-nie.png",
     },
     {
       organisation: "myPolitics",
@@ -385,14 +389,15 @@ export const MLODZI_WYBORCY_REPORT: CommonReport = {
       title: "Czym kierowali się młodzi wyborcy w 2025 roku?",
       url: "https://www.gazetakongresy.pl/czym-kierowali-sie-mlodzi-wyborcy-w-2025-roku-raport/",
       logo: "/assets/reports/media-logo/logo_gazeta-kongresy.png",
-      background: "/assets/reports/media-bg/bg_czym-kierowali-sie-mlodzi-wyborcy-w-2025-roku.png"
+      background:
+        "/assets/reports/media-bg/bg_czym-kierowali-sie-mlodzi-wyborcy-w-2025-roku.png",
     },
     {
       organisation: "Radio Warszawa",
-      title: "Raport „Młodzi Wyborcy 2025”: pragmatyzm, bezpieczeństwo i zaskakujące podziały",
+      title:
+        "Raport „Młodzi Wyborcy 2025”: pragmatyzm, bezpieczeństwo i zaskakujące podziały",
       url: "https://mcdn.podbean.com/mf/web/7eezqapc8f88xaqu/goscrw_2026_01_13.mp3",
       logo: "/assets/reports/media-logo/logo_radio-warszawa.png",
     },
   ],
-
 };
