@@ -24,7 +24,6 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
             gtag('consent', 'default', {
               'ad_storage': 'denied',
               'analytics_storage': 'denied',

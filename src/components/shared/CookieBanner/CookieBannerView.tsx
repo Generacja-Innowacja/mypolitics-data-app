@@ -8,7 +8,7 @@ import "vanilla-cookieconsent/dist/cookieconsent.css";
 
 export const CookieBanner: React.FC = () => {
   const updateGTMConsent = () => {
-    if (typeof window !== "undefined" && window.gtag) {
+    if (typeof window !== "undefined" && window.dataLayer) {
       const statisticsAccepted = CookieConsent.acceptedCategory("statistics");
       const marketingAccepted = CookieConsent.acceptedCategory("marketing");
       const preferencesAccepted = CookieConsent.acceptedCategory("preferences");
