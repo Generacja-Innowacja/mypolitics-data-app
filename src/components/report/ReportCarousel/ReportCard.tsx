@@ -9,7 +9,13 @@ interface ReportCardProps {
   background?: string;
 }
 
-const ReportCard = ({ title, organisation, url, logo, background }: ReportCardProps) => {
+const ReportCard = ({
+  title,
+  organisation,
+  url,
+  logo,
+  background,
+}: ReportCardProps) => {
   const isDragging = useRef(false);
 
   const handleClick = (e: React.MouseEvent) => {
@@ -34,7 +40,9 @@ const ReportCard = ({ title, organisation, url, logo, background }: ReportCardPr
           p-[24px] h-[118px] md:h-[204px] w-[384px] transition-all duration-300
           ${background ? "bg-cover bg-center" : "bg-[rgba(255,255,255,0.9)]"}
         `}
-        style={{ backgroundImage: background ? `url(${background})` : undefined }}
+        style={{
+          backgroundImage: background ? `url(${background})` : undefined,
+        }}
       >
         {/* Overlay */}
         {background && (
