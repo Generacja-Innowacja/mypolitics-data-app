@@ -8,6 +8,7 @@ import { CommonReport } from "@/types/report";
 import ReportAuthorGroup from "../ReportAuthorGroup";
 import ReportFindings from "../ReportFindings";
 import ReportExperts from "../ReportExperts";
+import ReportCarousel from "../ReportCarousel";
 
 interface Props {
   reportConfig: CommonReport;
@@ -19,8 +20,11 @@ interface Props {
 
 const ReportPage = ({ reportData, reportConfig }: Props): JSX.Element => {
   return (
-    <article className="flex flex-col items-center gap-8 md:gap-16 pb-8 md:pb-16">
+    <article className="flex flex-col items-center pb-8 md:pb-16">
       <ReportHeader report={reportConfig} />
+      <div className="mb-8 md:mb-16 w-full">
+        <ReportCarousel />
+      </div>
       <div className="flex flex-col gap-8 md:gap-12 max-w-screen-lg items-center w-full">
         <ReportFindings
           reportData={reportData.data}

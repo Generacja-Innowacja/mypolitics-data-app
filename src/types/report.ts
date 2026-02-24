@@ -45,6 +45,14 @@ export interface ReportDataLink {
   };
 }
 
+export interface ReportPublication {
+  organisation: string;
+  title: string;
+  url: string;
+  logo?: string;
+  background?: string;
+}
+
 export interface CommonReport {
   id: string;
   title: string;
@@ -55,4 +63,5 @@ export interface CommonReport {
   footer: ReportFooterSection[];
   authors: ReportAuthorGroup[];
   dataLinks: ReportDataLink[];
+  publications: ReportPublication[];
 }
