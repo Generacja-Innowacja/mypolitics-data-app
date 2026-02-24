@@ -9,23 +9,8 @@ interface ReportCardProps {
   background?: string;
 }
 
-const ReportCard = ({
-  title,
-  organisation,
-  url,
-  logo,
-  background,
-}: ReportCardProps): JSX.Element => {
+const ReportCard = ({ title, organisation, url, logo, background }: ReportCardProps) => {
   const isDragging = useRef(false);
-
-  const backgroundStyle = background
-    ? {
-        backgroundImage: `linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundClip: "padding-box",
-      }
-    : { backgroundColor: "white" };
 
   const handleClick = (e: React.MouseEvent) => {
     if (isDragging.current) e.preventDefault();
@@ -44,14 +29,19 @@ const ReportCard = ({
       <Button
         tag="div"
         styleType="outlined"
-        className="flex-shrink-0 overflow-hidden text-sea-storm border border-bluish-gray p-[24px] h-[118px] md:h-[204px] w-[384px]"
-        style={{
-          ...backgroundStyle,
-          flex: "0 0 minmax(100%, 384px)",
-          minWidth: "calc(100% - 32px)",
-        }}
+        className={`
+          group relative flex-shrink-0 overflow-hidden text-sea-storm border border-bluish-gray 
+          p-[24px] h-[118px] md:h-[204px] w-[384px] transition-all duration-300
+          ${background ? "bg-cover bg-center" : "bg-[rgba(255,255,255,0.9)]"}
+        `}
+        style={{ backgroundImage: background ? `url(${background})` : undefined }}
       >
-        <div className="flex flex-col justify-between h-full">
+        {/* Overlay */}
+        {background && (
+          <div className="absolute inset-0 bg-white/90 group-hover:bg-white/70 transition-colors duration-300 pointer-events-none" />
+        )}
+
+        <div className="flex flex-col justify-between h-full relative z-10">
           <h3 className="text-[16px] md:text-[24px] font-bold leading-[1.2] md:line-clamp-3 line-clamp-2">
             {title}
           </h3>
