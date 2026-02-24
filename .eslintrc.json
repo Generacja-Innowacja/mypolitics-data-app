@@ -7,8 +7,8 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "globals": {
-     "JSX": "readonly",
-     "React": "readonly"
+    "JSX": "readonly",
+    "React": "readonly"
   },
   "rules": {
     "no-unused-vars": "off",
