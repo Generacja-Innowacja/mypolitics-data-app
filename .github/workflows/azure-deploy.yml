@@ -15,7 +15,7 @@ jobs:
       name: Main
       url: https://data.mypolitics.pl
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: true
           lfs: false
